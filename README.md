@@ -21,7 +21,7 @@ specific features:
    
  (S559298- Sushma Mundlamuri): Coordinates tasks, ensures accurate weather data integration, and oversees overall development.
  (S566168-Akhil Reddy Depa): Designs an interface for easy access to weather information and also helps testing to ensure accurate weather data, functionality.
- (S559298-UdayKiran Reddy Devarapally): Focuses on efficiency when implementing app features and retrieving weather data.
+ (S567161-UdayKiranReddy Devarapally): Focuses on efficiency when implementing app features and retrieving weather data.
 
 
 
