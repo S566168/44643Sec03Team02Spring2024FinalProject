@@ -1,28 +1,25 @@
 # 44643Sec03Team02Spring2024FinalProject
 
-Spirnt#01
+Spirnt#02   
 
-1.What app are you planning to develop? Who are the target users of your app?            
+1.What app are you planning to develop? Who are the target users of your app?  
 
-Description: 
-   Our group plans to develop the "Climatic Weather" app, which offers weather insights. People who desire specific, location-specific weather information, predictions, and 
-   insights are the main target audience for this app.
+Our team is developing a live object detection app. It provides real-time identification of objects for educational, professional, and everyday use.
 
 2. What specific features do you intend to implement?
 specific features: 
-   1.Hyper-Local Forecast: Based on the user's GPS position, provides extremely precise, hyper-local weather forecasts.
-   2. Weather Trends: Displays trends and patterns in the user's local area by analyzing previous weather data.
-   3. Outdoor Activity Planner: We offer weather-related suggestions for the best times to engage in outdoor activities.
-   4. Severe Weather Alerts: Notifies users in real time of any severe weather conditions nearby.
-   5. Personalized Recommendations: Provides customized outfit and accessory suggestions according to the weather forecast.
-   6. Sunrise/Sunset Insights: Enhances daily planning by providing comprehensive information on sunrise and sunset times.
+Real-Time Object Detection: To identify things in the camera stream instantly, apply computer vision techniques.
+Object Identification: Give specifics about the objects you have recognized, such as their name, category, and any pertinent information.
+Multi-Object Detection: Permit the application to identify several objects in the camera frame at once.
+Augmented Reality Integration: Use augmented reality technology to superimpose object labels and extra information over the live camera stream.
+Offline Support: To guarantee functionality in locations with spotty internet access, incorporate offline object detection features.
+Customizable Settings: Give consumers the option to alter detection parameters including object categories of interest and sensitivity levels.
 
 4. Roles and Responsibilities:
    
- (S559298- Sushma Mundlamuri): Coordinates tasks, ensures accurate weather data integration, and oversees overall development.
- (S566168-Akhil Reddy Depa): Designs an interface for easy access to weather information and also helps testing to ensure accurate weather data, functionality.
- (S567161-UdayKiranReddy Devarapally): Focuses on efficiency when implementing app features and retrieving weather data.
-
+ Sushma Mundlamuri (S559298) leads project management efforts, ensuring tasks are organized and resources allocated effectively. maintain the app's quality standards.
+ Akhil Reddy Depa (S566168) is primarily responsible for developing the app's functionality and designing its user interface, ensuring a seamless user experience.
+ UdayKiranReddy Devarapally (S567161) supports development efforts and documents project progress while also conducting thorough testing to identify and resolve any issues. Together, they collaborate to create a robust and user-friendly app.
 
 
 
