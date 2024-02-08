@@ -4,7 +4,7 @@ Spirnt#02
 
 1.What app are you planning to develop? Who are the target users of your app?  
 
-Our team is developing a live object detection app. It provides real-time identification of objects for educational, professional, and everyday use.
+Our team is developing a live object detection app named "RealVision". It provides real-time identification of objects for educational, professional, and everyday use.
 
 2. What specific features do you intend to implement?
 specific features: 
