@@ -29,5 +29,9 @@ Customizable Settings: Give consumers the option to alter detection parameters i
  UdayKiranReddy Devarapally (S567161) supports development efforts and documents project progress while also conducting thorough testing to identify and resolve any issues. 
  Together, they collaborate to create a robust and user-friendly app.
 
+![Complete diagram](https://github.com/Akhil2402/44643Sec03Team02Spring2024FinalProject/assets/143060945/cc84ce4a-3199-4277-a108-18795a37d2bc)
+
+
+
 
 
