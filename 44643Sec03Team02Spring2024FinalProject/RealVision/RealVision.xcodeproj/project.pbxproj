@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72D9970E2B84839D004051E2 /* RealVisionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D9970D2B84839D004051E2 /* RealVisionVC.swift */; };
+		72D997112B84856E004051E2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 72D997102B84856E004051E2 /* Lottie */; };
 		D2AA4E6D2B82E717007D6FFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA4E6C2B82E717007D6FFC /* AppDelegate.swift */; };
 		D2AA4E6F2B82E717007D6FFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA4E6E2B82E717007D6FFC /* SceneDelegate.swift */; };
 		D2AA4E712B82E717007D6FFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA4E702B82E717007D6FFC /* ViewController.swift */; };
@@ -36,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		72D9970D2B84839D004051E2 /* RealVisionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealVisionVC.swift; sourceTree = "<group>"; };
 		D2AA4E692B82E717007D6FFC /* RealVision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealVision.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2AA4E6C2B82E717007D6FFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2AA4E6E2B82E717007D6FFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72D997112B84856E004051E2 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +106,7 @@
 				D2AA4E6C2B82E717007D6FFC /* AppDelegate.swift */,
 				D2AA4E6E2B82E717007D6FFC /* SceneDelegate.swift */,
 				D2AA4E702B82E717007D6FFC /* ViewController.swift */,
+				72D9970D2B84839D004051E2 /* RealVisionVC.swift */,
 				D2AA4E722B82E717007D6FFC /* Main.storyboard */,
 				D2AA4E752B82E718007D6FFC /* Assets.xcassets */,
 				D2AA4E772B82E718007D6FFC /* LaunchScreen.storyboard */,
@@ -143,6 +148,9 @@
 			dependencies = (
 			);
 			name = RealVision;
+			packageProductDependencies = (
+				72D997102B84856E004051E2 /* Lottie */,
+			);
 			productName = RealVision;
 			productReference = D2AA4E692B82E717007D6FFC /* RealVision.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +223,9 @@
 				Base,
 			);
 			mainGroup = D2AA4E602B82E717007D6FFC;
+			packageReferences = (
+				72D9970F2B84856E004051E2 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = D2AA4E6A2B82E717007D6FFC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -260,6 +271,7 @@
 			files = (
 				D2AA4E712B82E717007D6FFC /* ViewController.swift in Sources */,
 				D2AA4E6D2B82E717007D6FFC /* AppDelegate.swift in Sources */,
+				72D9970E2B84839D004051E2 /* RealVisionVC.swift in Sources */,
 				D2AA4E6F2B82E717007D6FFC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -601,6 +613,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		72D9970F2B84856E004051E2 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		72D997102B84856E004051E2 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72D9970F2B84856E004051E2 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D2AA4E612B82E717007D6FFC /* Project object */;
 }
