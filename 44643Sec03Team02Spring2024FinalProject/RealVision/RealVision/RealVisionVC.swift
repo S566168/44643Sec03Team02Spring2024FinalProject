@@ -14,7 +14,17 @@ class RealVisionVC: UIViewController {
     @IBOutlet weak var passwordLBL: UILabel!
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
-    @IBOutlet weak var launchLAV: LottieAnimationView!
+    @IBOutlet weak var launchLAV: LottieAnimationView!{
+    didSet {
+                        launchLAV.animation = LottieAnimation.named("Animation1")
+                        launchLAV.alpha = 1
+                        launchLAV.play(completion: { [weak self] (_) in
+                            UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 1, delay: 0.1, options: [.curveEaseIn], animations: {
+                                self?.launchLAV.alpha = 0.0
+                            })
+                        })
+                    }
+                }
     
 
     override func viewDidLoad() {
