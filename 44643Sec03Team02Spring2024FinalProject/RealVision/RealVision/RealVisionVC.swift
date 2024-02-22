@@ -14,17 +14,20 @@ class RealVisionVC: UIViewController {
     @IBOutlet weak var passwordLBL: UILabel!
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
-    @IBOutlet weak var launchLAV: LottieAnimationView!{
+    @IBOutlet weak var LaunchLAV: LottieAnimationView!{
     didSet {
-                        launchLAV.animation = LottieAnimation.named("Animation1")
-                        launchLAV.alpha = 1
-                        launchLAV.play(completion: { [weak self] (_) in
-                            UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 1, delay: 0.1, options: [.curveEaseIn], animations: {
-                                self?.launchLAV.alpha = 0.0
-                            })
-                        })
-                    }
-                }
+        LaunchLAV.animation = LottieAnimation.named("Detection")
+        LaunchLAV.loopMode = .playOnce
+        LaunchLAV.alpha = 1
+        LaunchLAV.play { [weak self] _ in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                self.LaunchLAV.alpha = 0
+            }
+        }
+    }
+}
+    
     
 
     override func viewDidLoad() {
