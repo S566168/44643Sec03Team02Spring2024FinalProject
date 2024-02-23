@@ -12,6 +12,13 @@ class RealVisionVC: UIViewController {
     
     @IBOutlet weak var userNameLBL: UILabel!
     @IBOutlet weak var passwordLBL: UILabel!
+    
+    @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var resetBTN: UIButton!
+    @IBOutlet weak var cancelBTN: UIButton!
+    @IBOutlet weak var resetPasswordLBL: UILabel!
+    @IBOutlet weak var emailLBL: UILabel!
+    
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var LaunchLAV: LottieAnimationView!{
@@ -51,6 +58,18 @@ class RealVisionVC: UIViewController {
     
     @IBAction func signUpBTN(_ sender: UIButton) {
     }
+    
+    @IBAction func reset(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func cancel(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func email(_ sender: UITextField) {
+    }
+    
 
     /*
     // MARK: - Navigation
