@@ -49,6 +49,7 @@ class RealVisionVC: UIViewController {
     @IBOutlet weak var createAccBTN: UIButton!
     @IBOutlet weak var accountLBL: UILabel!
     @IBOutlet weak var loginBTN: UIButton!
+    @IBOutlet weak var ResetPasswordLBL: UILabel!
     
     
     
