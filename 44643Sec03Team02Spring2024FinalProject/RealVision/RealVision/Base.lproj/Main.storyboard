@@ -237,10 +237,10 @@
             </objects>
             <point key="canvasLocation" x="1048.0916030534352" y="-8.4507042253521139"/>
         </scene>
-        <!--View Controller-->
+        <!--Real VisionVC-->
         <scene sceneID="40F-bL-muH">
             <objects>
-                <viewController id="PuM-xF-KL3" sceneMemberID="viewController">
+                <viewController id="PuM-xF-KL3" customClass="RealVisionVC" customModule="RealVision" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="25r-7c-wvO">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -264,6 +264,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="fullname:" destination="PuM-xF-KL3" eventType="editingDidEnd" id="UiZ-WK-6Vp"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxu-Yf-wkK">
                                 <rect key="frame" x="49" y="276" width="115" height="21"/>
@@ -277,6 +280,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="phoneNumber:" destination="PuM-xF-KL3" eventType="editingDidEnd" id="egO-Iv-T09"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gY0-x5-hY9">
                                 <rect key="frame" x="49" y="347" width="108" height="21"/>
@@ -290,6 +296,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="emailAddress:" destination="PuM-xF-KL3" eventType="editingDidEnd" id="Mfb-Xc-q1u"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GkB-N5-b0b">
                                 <rect key="frame" x="49" y="418" width="74" height="21"/>
@@ -303,6 +312,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="password:" destination="PuM-xF-KL3" eventType="editingDidEnd" id="NZj-0G-F7s"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5KS-lT-AEx">
                                 <rect key="frame" x="49" y="489" width="143" height="25"/>
@@ -316,12 +328,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="confirmPassword:" destination="PuM-xF-KL3" eventType="editingDidEnd" id="NJi-RH-qAe"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XyY-Qu-sql">
                                 <rect key="frame" x="110" y="594" width="141" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Create account"/>
+                                <connections>
+                                    <action selector="createBTN:" destination="PuM-xF-KL3" eventType="editingDidEnd" id="x7o-nV-AEO"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Already have an account? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opc-Gs-ADO" userLabel="accountLabel">
                                 <rect key="frame" x="83" y="654" width="195" height="18"/>
@@ -335,12 +353,30 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log in"/>
+                                <connections>
+                                    <action selector="login:" destination="PuM-xF-KL3" eventType="editingDidEnd" id="vIy-BX-KlK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oSQ-EW-X1Z"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="S4t-gD-UVK"/>
+                    <connections>
+                        <outlet property="EmailTF" destination="hSY-3S-vFS" id="pGf-6G-FGE"/>
+                        <outlet property="PwdLBL" destination="GkB-N5-b0b" id="Ofb-TD-0Zu"/>
+                        <outlet property="PwdTF" destination="gZH-vf-cx8" id="EG7-T6-XWY"/>
+                        <outlet property="accountLBL" destination="opc-Gs-ADO" id="h7f-4b-baw"/>
+                        <outlet property="confirmPwdLBL" destination="5KS-lT-AEx" id="sga-hF-e13"/>
+                        <outlet property="confirmPwdTF" destination="UEc-a3-3rf" id="pwT-Hg-oko"/>
+                        <outlet property="createAccBTN" destination="XyY-Qu-sql" id="8ea-zN-FjF"/>
+                        <outlet property="emailAddressLBL" destination="gY0-x5-hY9" id="CVB-7f-Y9h"/>
+                        <outlet property="fullNameLBL" destination="WFD-cp-zAs" id="4ed-XQ-aOn"/>
+                        <outlet property="fullNameTF" destination="zN6-lo-Ph7" id="oI5-eq-mc1"/>
+                        <outlet property="loginBTN" destination="Krp-Y1-4Yo" id="wDv-oT-jgY"/>
+                        <outlet property="phoneNumberLBL" destination="Jxu-Yf-wkK" id="zk4-5x-epR"/>
+                        <outlet property="phoneNumberTF" destination="KTZ-Nb-sSF" id="QOu-0Y-Chx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLH-eF-PSs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

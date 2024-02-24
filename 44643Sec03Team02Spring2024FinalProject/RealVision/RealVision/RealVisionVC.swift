@@ -12,11 +12,10 @@ class RealVisionVC: UIViewController {
     
     @IBOutlet weak var userNameLBL: UILabel!
     @IBOutlet weak var passwordLBL: UILabel!
-    
+    //Second Screen Outlets
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var resetBTN: UIButton!
     @IBOutlet weak var cancelBTN: UIButton!
-    @IBOutlet weak var resetPasswordLBL: UILabel!
     @IBOutlet weak var emailLBL: UILabel!
     
     @IBOutlet weak var userNameTF: UITextField!
@@ -35,6 +34,23 @@ class RealVisionVC: UIViewController {
     }
 }
     
+    //Third Screen Outlets
+    
+    @IBOutlet weak var fullNameLBL: UILabel!
+    @IBOutlet weak var fullNameTF: UITextField!
+    @IBOutlet weak var phoneNumberLBL: UILabel!
+    @IBOutlet weak var phoneNumberTF: UITextField!
+    @IBOutlet weak var emailAddressLBL: UILabel!
+    @IBOutlet weak var EmailAddressTF: UITextField!
+    @IBOutlet weak var PwdLBL: UILabel!
+    @IBOutlet weak var PwdTF: UITextField!
+    @IBOutlet weak var confirmPwdLBL: UILabel!
+    @IBOutlet weak var confirmPwdTF: UITextField!
+    @IBOutlet weak var createAccBTN: UIButton!
+    @IBOutlet weak var accountLBL: UILabel!
+    @IBOutlet weak var loginBTN: UIButton!
+    
+    
     
 
     override func viewDidLoad() {
@@ -43,7 +59,7 @@ class RealVisionVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
+    //First Screen Actions
     @IBAction func userTF(_ sender: UITextField) {
     }
     
@@ -59,6 +75,7 @@ class RealVisionVC: UIViewController {
     @IBAction func signUpBTN(_ sender: UIButton) {
     }
     
+    //Second Screen Actions
     @IBAction func reset(_ sender: UIButton) {
     }
     
@@ -69,6 +86,31 @@ class RealVisionVC: UIViewController {
     
     @IBAction func email(_ sender: UITextField) {
     }
+    //Third Screen Actions
+    
+    @IBAction func fullname(_ sender: UITextField) {
+    }
+    
+    @IBAction func phoneNumber(_ sender: UITextField) {
+    }
+    
+    @IBAction func emailAddress(_ sender: UITextField) {
+    }
+    
+    @IBAction func password(_ sender: UITextField) {
+    }
+    
+    @IBAction func confirmPassword(_ sender: UITextField) {
+    }
+    
+    
+    @IBAction func login(_ sender: UIButton) {
+    }
+    
+    @IBAction func createBTN(_ sender: UIButton) {
+    }
+    
+    
     
 
     /*
