@@ -68,7 +68,28 @@ class RealVisionVC: UIViewController {
     }
     
     @IBAction func loginBTN(_ sender: UIButton) {
-    }
+        if let email = userNameTF.text , let password = passwordTF.text {
+            if !email.validateEmailId(){
+                openAlert(title: "Alert", message: "Email address not found", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{ _ in
+                    print("Clicked")
+                    
+                }])
+                
+            }else if !password.validatePassword(){
+                openAlert(title: "Alert", message: "please enter valid password", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{ _ in
+                    print("Clicked")
+                    
+                }])
+            }else{
+                
+            }
+        }else {
+                openAlert(title: "Alert", message: "please add detail ", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{ _ in
+                    print("Clicked")
+                    
+                }])
+            }
+        }
     
     @IBAction func forgotPwdBTN(_ sender: UIButton) {
     }
@@ -87,7 +108,7 @@ class RealVisionVC: UIViewController {
     
     @IBAction func email(_ sender: UITextField) {
     }
-    //Third Screen Actions
+
     
     @IBAction func fullname(_ sender: UITextField) {
     }
@@ -113,15 +134,4 @@ class RealVisionVC: UIViewController {
     
     
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
