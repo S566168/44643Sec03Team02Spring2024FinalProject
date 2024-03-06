@@ -51,6 +51,16 @@ class RealVisionVC: UIViewController {
     @IBOutlet weak var loginBTN: UIButton!
     @IBOutlet weak var ResetPasswordLBL: UILabel!
     
+    //Fourth Screen Outlets
+    
+    
+    @IBOutlet weak var photosBTN: UIButton!
+    
+    
+    
+    
+    
+    
     
     
 
@@ -132,6 +142,24 @@ class RealVisionVC: UIViewController {
     @IBAction func createBTN(_ sender: UIButton) {
     }
     
+    //fourth screen actions
+    
+    
+    
+    @IBAction func photos(_ sender: UIButton) {
+    }
+    
+    @IBAction func live(_ sender: UIButton) {
+    }
+    
+    @IBAction func scanner(_ sender: UIButton) {
+    }
+    
+    @IBAction func logo(_ sender: UIButton) {
+    }
+    
+    @IBAction func settings(_ sender: UIButton) {
+    }
     
     
 }
