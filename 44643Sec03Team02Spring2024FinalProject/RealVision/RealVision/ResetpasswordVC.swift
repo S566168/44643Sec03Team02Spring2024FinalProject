@@ -27,6 +27,9 @@ class ResetpasswordVC: UIViewController {
     
     @IBAction func reset(_ sender: UIButton) {
     }
+    @IBAction func Cancel(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "LoginView", sender: sender)
+    }
     
     /*
     // MARK: - Navigation

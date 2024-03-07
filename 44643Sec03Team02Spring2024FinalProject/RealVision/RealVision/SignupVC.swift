@@ -32,6 +32,7 @@ class SignupVC: UIViewController {
     
     
     @IBAction func login(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "LoginView", sender: sender)
     }
     
     @IBAction func createAccount(_ sender: UIButton) {

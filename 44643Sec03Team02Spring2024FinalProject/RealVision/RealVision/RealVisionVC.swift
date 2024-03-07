@@ -84,20 +84,13 @@ class RealVisionVC: UIViewController {
         self.performSegue(withIdentifier: "HomescreenView", sender: sender)
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        switch(segue.identifier){
-//        case "HomescreenView":
-//            guard let destvc = segue.destination as?
-//            
-//        default:
-//            assert(false,"Invalid segue")
-//        }
-//    }
     
     @IBAction func forgotPwdBTN(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "ResetpasswordView", sender: sender)
     }
     
     @IBAction func signUpBTN(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "SignupView", sender: sender)
     }
     
 }

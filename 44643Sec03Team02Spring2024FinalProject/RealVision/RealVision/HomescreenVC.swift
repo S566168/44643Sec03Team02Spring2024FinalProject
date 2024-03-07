@@ -37,6 +37,11 @@ class HomescreenVC: UIViewController {
     @IBAction func scanner(_ sender: UIButton) {
     }
     
+    @IBAction func LogoBTN(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "LoginView", sender: sender)
+        
+    }
+    
     
     /*
     // MARK: - Navigation
