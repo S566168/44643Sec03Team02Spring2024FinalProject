@@ -28,17 +28,34 @@ class RealVisionVC: UIViewController {
         }
     }
     
+    @IBOutlet weak var loginBTN: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
     }
-    
-    //First Screen Actions
-    @IBAction func userTF(_ sender: UITextField) {
+    override func viewIsAppearing(_ animated: Bool) {
+        super.viewIsAppearing(animated)
+        self.userNameTF.text = ""
+        self.passwordTF.text = ""
+        self.passwordTF.isEnabled = false
+        //self.loginBTN.isEnabled = false
     }
     
-    @IBAction func passwordTF(_ sender: UITextField) {
+    //First Screen Actions
+    
+    @IBAction func checkUsername(_ sender: UITextField) {
+        guard let username = self.userNameTF.text, !username.isEmpty else{return}
+        self.passwordTF.isEnabled = true
+    }
+    
+    
+    @IBAction func checkPassword(_ sender: UITextField) {
+        guard let password = self.passwordTF.text, !password.isEmpty else{return}
+        self.passwordTF.isEnabled = true
+        
     }
     
     @IBAction func loginBTN(_ sender: UIButton) {
