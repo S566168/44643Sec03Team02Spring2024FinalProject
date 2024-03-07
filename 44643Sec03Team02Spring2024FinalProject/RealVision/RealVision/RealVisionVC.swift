@@ -12,58 +12,22 @@ class RealVisionVC: UIViewController {
     
     @IBOutlet weak var userNameLBL: UILabel!
     @IBOutlet weak var passwordLBL: UILabel!
-    //Second Screen Outlets
-    @IBOutlet weak var emailTF: UITextField!
-    @IBOutlet weak var resetBTN: UIButton!
-    @IBOutlet weak var cancelBTN: UIButton!
-    @IBOutlet weak var emailLBL: UILabel!
-    
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var LaunchLAV: LottieAnimationView!{
-    didSet {
-        LaunchLAV.animation = LottieAnimation.named("Detection")
-        LaunchLAV.loopMode = .playOnce
-        LaunchLAV.alpha = 1
-        LaunchLAV.play { [weak self] _ in
-            guard let self = self else { return }
-            DispatchQueue.main.async {
-                self.LaunchLAV.alpha = 0
+        didSet {
+            LaunchLAV.animation = LottieAnimation.named("Detection")
+            LaunchLAV.loopMode = .playOnce
+            LaunchLAV.alpha = 1
+            LaunchLAV.play { [weak self] _ in
+                guard let self = self else { return }
+                DispatchQueue.main.async {
+                    self.LaunchLAV.alpha = 0
+                }
             }
         }
     }
-}
     
-    //Third Screen Outlets
-    
-    @IBOutlet weak var fullNameLBL: UILabel!
-    @IBOutlet weak var fullNameTF: UITextField!
-    @IBOutlet weak var phoneNumberLBL: UILabel!
-    @IBOutlet weak var phoneNumberTF: UITextField!
-    @IBOutlet weak var emailAddressLBL: UILabel!
-    @IBOutlet weak var EmailAddressTF: UITextField!
-    @IBOutlet weak var PwdLBL: UILabel!
-    @IBOutlet weak var PwdTF: UITextField!
-    @IBOutlet weak var confirmPwdLBL: UILabel!
-    @IBOutlet weak var confirmPwdTF: UITextField!
-    @IBOutlet weak var createAccBTN: UIButton!
-    @IBOutlet weak var accountLBL: UILabel!
-    @IBOutlet weak var loginBTN: UIButton!
-    @IBOutlet weak var ResetPasswordLBL: UILabel!
-    
-    //Fourth Screen Outlets
-    
-    
-    @IBOutlet weak var photosBTN: UIButton!
-    
-    
-    
-    
-    
-    
-    
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -94,12 +58,24 @@ class RealVisionVC: UIViewController {
                 
             }
         }else {
-                openAlert(title: "Alert", message: "please add detail ", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{ _ in
-                    print("Clicked")
-                    
-                }])
-            }
+            openAlert(title: "Alert", message: "please add detail ", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{ _ in
+                print("Clicked")
+                
+            }])
         }
+        
+        self.performSegue(withIdentifier: "HomescreenView", sender: sender)
+    }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        switch(segue.identifier){
+//        case "HomescreenView":
+//            guard let destvc = segue.destination as?
+//            
+//        default:
+//            assert(false,"Invalid segue")
+//        }
+//    }
     
     @IBAction func forgotPwdBTN(_ sender: UIButton) {
     }
@@ -107,59 +83,5 @@ class RealVisionVC: UIViewController {
     @IBAction func signUpBTN(_ sender: UIButton) {
     }
     
-    //Second Screen Actions
-    @IBAction func reset(_ sender: UIButton) {
-    }
-    
-    
-    @IBAction func cancel(_ sender: UIButton) {
-    }
-    
-    
-    @IBAction func email(_ sender: UITextField) {
-    }
-
-    
-    @IBAction func fullname(_ sender: UITextField) {
-    }
-    
-    @IBAction func phoneNumber(_ sender: UITextField) {
-    }
-    
-    @IBAction func emailAddress(_ sender: UITextField) {
-    }
-    
-    @IBAction func password(_ sender: UITextField) {
-    }
-    
-    @IBAction func confirmPassword(_ sender: UITextField) {
-    }
-    
-    
-    @IBAction func login(_ sender: UIButton) {
-    }
-    
-    @IBAction func createBTN(_ sender: UIButton) {
-    }
-    
-    //fourth screen actions
-    
-    
-    
-    @IBAction func photos(_ sender: UIButton) {
-    }
-    
-    @IBAction func live(_ sender: UIButton) {
-    }
-    
-    @IBAction func scanner(_ sender: UIButton) {
-    }
-    
-    @IBAction func logo(_ sender: UIButton) {
-    }
-    
-    @IBAction func settings(_ sender: UIButton) {
-    }
-    
-    
 }
+
