@@ -8,6 +8,13 @@
 import UIKit
 
 class HomescreenVC: UIViewController {
+    
+    @IBOutlet weak var logoBTN: UIButton!
+    @IBOutlet weak var settingsBTN: UIButton!
+    @IBOutlet weak var photosBTN: UIButton!
+    @IBOutlet weak var liveBTN: UIButton!
+    @IBOutlet weak var scannerBTN: UIButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +23,21 @@ class HomescreenVC: UIViewController {
     }
     
 
+    
+    
+    @IBAction func settings(_ sender: UIButton) {
+    }
+    
+    @IBAction func photos(_ sender: UIButton) {
+    }
+    
+    @IBAction func live(_ sender: UIButton) {
+    }
+    
+    @IBAction func scanner(_ sender: UIButton) {
+    }
+    
+    
     /*
     // MARK: - Navigation
 

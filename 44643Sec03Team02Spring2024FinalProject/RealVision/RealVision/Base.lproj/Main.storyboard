@@ -34,6 +34,9 @@
                                                 <rect key="frame" x="112.33333333333334" y="0.0" width="260.66666666666663" height="274.33333333333331"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="settings "/>
+                                                <connections>
+                                                    <action selector="settings:" destination="sC7-tU-LxE" eventType="touchUpInside" id="LUn-uA-Ezz"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -47,16 +50,25 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="119" height="85"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="Img"/>
+                                                <connections>
+                                                    <action selector="photos:" destination="sC7-tU-LxE" eventType="touchUpInside" id="9NL-pY-M7j"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ef5-QW-zpW" userLabel="liveBTN">
                                                 <rect key="frame" x="127" y="0.0" width="119" height="85"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="live"/>
+                                                <connections>
+                                                    <action selector="live:" destination="sC7-tU-LxE" eventType="touchUpInside" id="tEp-Nh-B4G"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRm-fh-od1" userLabel="scannerBTN">
                                                 <rect key="frame" x="254" y="0.0" width="119" height="85"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="scan"/>
+                                                <connections>
+                                                    <action selector="scanner:" destination="sC7-tU-LxE" eventType="touchUpInside" id="LrV-cl-Hza"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -83,6 +95,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qBl-N5-Xda"/>
+                    <connections>
+                        <outlet property="liveBTN" destination="Ef5-QW-zpW" id="ut0-UX-1dv"/>
+                        <outlet property="logoBTN" destination="gl9-tx-IZz" id="SnY-SU-cLY"/>
+                        <outlet property="photosBTN" destination="3u8-uf-S1d" id="Dzx-kl-daQ"/>
+                        <outlet property="scannerBTN" destination="YRm-fh-od1" id="jcw-ne-DN1"/>
+                        <outlet property="settingsBTN" destination="en9-SQ-CI5" id="rTJ-aX-NFV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6OL-tp-uti" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -273,16 +292,16 @@
                                 <rect key="frame" x="20" y="40" width="353" height="782"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RealVision" translatesAutoresizingMaskIntoConstraints="NO" id="INC-Iw-uzO" userLabel="RealVision">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="445.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="172"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset Password" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGV-Yi-MbA">
-                                        <rect key="frame" x="0.0" y="453.33333333333331" width="353" height="77.999999999999943"/>
+                                        <rect key="frame" x="0.0" y="180" width="353" height="78.333333333333314"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bd3-xJ-m8v" userLabel="emailSV">
-                                        <rect key="frame" x="0.0" y="539.33333333333337" width="353" height="78.333333333333371"/>
+                                        <rect key="frame" x="0.0" y="266.33333333333331" width="353" height="78"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your Email" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSL-49-d6Z">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="20.333333333333332"/>
@@ -291,22 +310,28 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="your email id" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pNC-08-uLm">
-                                                <rect key="frame" x="0.0" y="28.333333333333258" width="353" height="50"/>
+                                                <rect key="frame" x="0.0" y="28.333333333333368" width="353" height="49.666666666666657"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="email:" destination="0ao-C1-FPz" eventType="editingDidEnd" id="xFV-aR-FLr"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dgT-is-c1p" userLabel="ButtonsSV">
-                                        <rect key="frame" x="0.0" y="625.66666666666663" width="353" height="156.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="352.33333333333326" width="353" height="429.66666666666674"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrc-ka-Ppq">
-                                                <rect key="frame" x="0.0" y="0.0" width="353" height="74"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="211"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Reset"/>
+                                                <connections>
+                                                    <action selector="reset:" destination="0ao-C1-FPz" eventType="touchUpInside" id="spa-9H-E33"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qd8-Hd-djy">
-                                                <rect key="frame" x="0.0" y="82" width="353" height="74.333333333333314"/>
+                                                <rect key="frame" x="0.0" y="219.00000000000006" width="353" height="210.66666666666669"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
                                             </button>
@@ -334,6 +359,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uow-RQ-T0J"/>
+                    <connections>
+                        <outlet property="cancelBTN" destination="Qd8-Hd-djy" id="3DI-6g-4pC"/>
+                        <outlet property="emailIdTF" destination="pNC-08-uLm" id="3n9-jP-fCe"/>
+                        <outlet property="emailLBL" destination="RSL-49-d6Z" id="Vh6-wL-DEH"/>
+                        <outlet property="resetBTN" destination="qrc-ka-Ppq" id="0Jj-yO-InT"/>
+                        <outlet property="resetPasswordLBL" destination="KGV-Yi-MbA" id="3Y1-2b-2Dx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdZ-RF-kyt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -450,6 +482,9 @@
                                                         <rect key="frame" x="82.333333333333329" y="0.0" width="148.33333333333337" height="33.666666666666664"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Create account"/>
+                                                        <connections>
+                                                            <action selector="createAccount:" destination="PuM-xF-KL3" eventType="touchUpInside" id="gco-kk-yja"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ExW-lu-Jky">
                                                         <rect key="frame" x="238.66666666666671" y="0.0" width="74.333333333333343" height="33.666666666666664"/>
@@ -466,6 +501,9 @@
                                                 <rect key="frame" x="0.0" y="41.666666666666742" width="313" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Log in"/>
+                                                <connections>
+                                                    <action selector="login:" destination="PuM-xF-KL3" eventType="touchUpInside" id="Qpc-gm-Koc"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account? " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opc-Gs-ADO" userLabel="accountLabel">
                                                 <rect key="frame" x="0.0" y="84" width="313" height="20.333333333333329"/>
@@ -496,6 +534,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="S4t-gD-UVK"/>
+                    <connections>
+                        <outlet property="confirmPwdTF" destination="UEc-a3-3rf" id="JrQ-qd-wf8"/>
+                        <outlet property="createAccountBTN" destination="XyY-Qu-sql" id="v0x-t1-Kcd"/>
+                        <outlet property="emailTF" destination="hSY-3S-vFS" id="rRF-lV-0kO"/>
+                        <outlet property="fullNameTF" destination="zN6-lo-Ph7" id="xnx-vR-9pk"/>
+                        <outlet property="loginBTN" destination="Krp-Y1-4Yo" id="g8w-TC-8hE"/>
+                        <outlet property="passwordTF" destination="gZH-vf-cx8" id="nl7-Oe-IU6"/>
+                        <outlet property="phoneNumberTF" destination="KTZ-Nb-sSF" id="e9q-L5-KcM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLH-eF-PSs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

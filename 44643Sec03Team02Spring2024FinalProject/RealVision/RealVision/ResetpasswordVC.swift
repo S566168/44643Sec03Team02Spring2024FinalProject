@@ -8,6 +8,13 @@
 import UIKit
 
 class ResetpasswordVC: UIViewController {
+    
+    @IBOutlet weak var resetPasswordLBL: UILabel!
+    @IBOutlet weak var emailLBL: UILabel!
+    @IBOutlet weak var emailIdTF: UITextField!
+    @IBOutlet weak var resetBTN: UIButton!
+    @IBOutlet weak var cancelBTN: UIButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,7 +22,12 @@ class ResetpasswordVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func email(_ sender: UITextField) {
+    }
+    
+    @IBAction func reset(_ sender: UIButton) {
+    }
+    
     /*
     // MARK: - Navigation
 

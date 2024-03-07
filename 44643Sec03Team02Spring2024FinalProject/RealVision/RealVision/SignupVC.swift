@@ -8,12 +8,36 @@
 import UIKit
 
 class SignupVC: UIViewController {
+    
+    
+    
+    @IBOutlet weak var fullNameTF: UITextField!
+    @IBOutlet weak var phoneNumberTF: UITextField!
+    @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
+    @IBOutlet weak var confirmPwdTF: UITextField!
+    @IBOutlet weak var createAccountBTN: UIButton!
+    @IBOutlet weak var loginBTN: UIButton!
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    
+    
+    
+    @IBAction func login(_ sender: UIButton) {
+    }
+    
+    @IBAction func createAccount(_ sender: UIButton) {
+    }
+    
+    
     
 
     /*
