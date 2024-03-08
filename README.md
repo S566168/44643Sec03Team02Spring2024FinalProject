@@ -12,11 +12,13 @@ Spirnt#04
 
 <img width="1440" alt="Screenshot 2024-03-08 at 4 04 20 PM" src="https://github.com/Akhil2402/44643Sec03Team02Spring2024FinalProject/assets/143120291/05241dc9-e1c1-43e4-926d-c590560331d7">
 
+
 4.In the second Commit(Akhil Reddy Depa) Added constraints to home screen and modified required changes in all previous screen to make UI look better.
 5.In the second Commit(Sushma Mundlamuri) implemented some functionality on login screen.
 6.In the second Commit(UdayKiranReddy Devarapally) Added outlets and actions to individual view controllers of all screens.
 
 <img width="1440" alt="Screenshot 2024-03-08 at 4 04 43 PM" src="https://github.com/Akhil2402/44643Sec03Team02Spring2024FinalProject/assets/143120291/431f1a51-749c-449e-b5b8-afa8a5088c4d">
+
 
 7.In the third Commit(Akhil Reddy Depa) Added navigation segue's to all the screens.
 8.In the third Commit(Sushma Mundlamuri) Added settings screen and UI is implemented.
