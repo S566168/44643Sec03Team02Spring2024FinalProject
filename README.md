@@ -7,6 +7,7 @@ Team Members.
 Spirnt#04
 
 1.In the first Commit(Akhil Reddy Depa) Added google and facebook buttons in login page and also added functionalities to validate email and password in the login page.
+
 2.In the first Commit(Sushma Mundlamuri) Added another screen for homescreen and implemented some UI.
 3.In the first Commit(UdayKiranReddy Devarapally) Added outlets and actions of screen to the home screen.
 
