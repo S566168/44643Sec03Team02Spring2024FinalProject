@@ -10,7 +10,7 @@
 		726A95A62B9ACC170085492E /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726A95A52B9ACC170085492E /* SettingsVC.swift */; };
 		72D9970E2B84839D004051E2 /* RealVisionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D9970D2B84839D004051E2 /* RealVisionVC.swift */; };
 		72D997112B84856E004051E2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 72D997102B84856E004051E2 /* Lottie */; };
-		9544896A2BB380410050F01B /* GoogleService-Info (2).plist in Resources */ = {isa = PBXBuildFile; fileRef = 954489692BB380410050F01B /* GoogleService-Info (2).plist */; };
+		9544896A2BB380410050F01B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 954489692BB380410050F01B /* GoogleService-Info.plist */; };
 		9544896D2BB383140050F01B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 9544896C2BB383140050F01B /* FirebaseAnalytics */; };
 		9544896F2BB383140050F01B /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 9544896E2BB383140050F01B /* FirebaseDatabase */; };
 		954489712BB383140050F01B /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 954489702BB383140050F01B /* FirebaseDatabaseSwift */; };
@@ -18,6 +18,7 @@
 		954489752BB383140050F01B /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 954489742BB383140050F01B /* FirebaseFirestoreCombine-Community */; };
 		954489772BB383140050F01B /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 954489762BB383140050F01B /* FirebaseFirestoreSwift */; };
 		954489792BB383140050F01B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 954489782BB383140050F01B /* FirebaseStorage */; };
+		9544897F2BB4CB840050F01B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9544897E2BB4CB840050F01B /* FirebaseAuth */; };
 		D242298A2B97CC6A0081737E /* UIAlertController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24229892B97CC6A0081737E /* UIAlertController + Extension.swift */; };
 		D242298C2B97CC990081737E /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D242298B2B97CC990081737E /* UIViewController + Extension.swift */; };
 		D242298E2B97CCB50081737E /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D242298D2B97CCB50081737E /* String + Extension.swift */; };
@@ -55,7 +56,7 @@
 /* Begin PBXFileReference section */
 		726A95A52B9ACC170085492E /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		72D9970D2B84839D004051E2 /* RealVisionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealVisionVC.swift; sourceTree = "<group>"; };
-		954489692BB380410050F01B /* GoogleService-Info (2).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (2).plist"; sourceTree = "<group>"; };
+		954489692BB380410050F01B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D24229892B97CC6A0081737E /* UIAlertController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController + Extension.swift"; sourceTree = "<group>"; };
 		D242298B2B97CC990081737E /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		D242298D2B97CCB50081737E /* String + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
@@ -86,6 +87,7 @@
 				9544896F2BB383140050F01B /* FirebaseDatabase in Frameworks */,
 				9544896D2BB383140050F01B /* FirebaseAnalytics in Frameworks */,
 				954489772BB383140050F01B /* FirebaseFirestoreSwift in Frameworks */,
+				9544897F2BB4CB840050F01B /* FirebaseAuth in Frameworks */,
 				954489752BB383140050F01B /* FirebaseFirestoreCombine-Community in Frameworks */,
 				954489792BB383140050F01B /* FirebaseStorage in Frameworks */,
 				954489732BB383140050F01B /* FirebaseFirestore in Frameworks */,
@@ -156,7 +158,7 @@
 				D2AA4E752B82E718007D6FFC /* Assets.xcassets */,
 				D2AA4E772B82E718007D6FFC /* LaunchScreen.storyboard */,
 				D2AA4E7A2B82E718007D6FFC /* Info.plist */,
-				954489692BB380410050F01B /* GoogleService-Info (2).plist */,
+				954489692BB380410050F01B /* GoogleService-Info.plist */,
 			);
 			path = RealVision;
 			sourceTree = "<group>";
@@ -203,6 +205,7 @@
 				954489742BB383140050F01B /* FirebaseFirestoreCombine-Community */,
 				954489762BB383140050F01B /* FirebaseFirestoreSwift */,
 				954489782BB383140050F01B /* FirebaseStorage */,
+				9544897E2BB4CB840050F01B /* FirebaseAuth */,
 			);
 			productName = RealVision;
 			productReference = D2AA4E692B82E717007D6FFC /* RealVision.app */;
@@ -296,7 +299,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9544896A2BB380410050F01B /* GoogleService-Info (2).plist in Resources */,
+				9544896A2BB380410050F01B /* GoogleService-Info.plist in Resources */,
 				D2AA4E792B82E718007D6FFC /* LaunchScreen.storyboard in Resources */,
 				D2AA4E762B82E718007D6FFC /* Assets.xcassets in Resources */,
 				D2AA4E742B82E717007D6FFC /* Main.storyboard in Resources */,
@@ -735,6 +738,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9544896B2BB383140050F01B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		9544897E2BB4CB840050F01B /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9544896B2BB383140050F01B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

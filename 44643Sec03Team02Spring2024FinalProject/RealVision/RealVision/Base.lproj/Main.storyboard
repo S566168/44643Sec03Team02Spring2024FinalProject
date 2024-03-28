@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -92,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="He7-s9-CyW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-629" y="378"/>
+            <point key="canvasLocation" x="3744" y="588"/>
         </scene>
         <!--HomescreenVC-->
         <scene sceneID="2RH-R7-XKD">
@@ -103,13 +103,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NZw-Jt-B86" userLabel="BigContainer">
-                                <rect key="frame" x="10" y="10" width="373" height="367.33333333333331"/>
+                                <rect key="frame" x="10" y="10" width="373" height="822"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cqa-ix-G9y" userLabel="Top Buttons">
-                                        <rect key="frame" x="0.0" y="0.0" width="373" height="274.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="82.333333333333329"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gl9-tx-IZz" userLabel="logoBTN">
-                                                <rect key="frame" x="0.0" y="0.0" width="104.33333333333333" height="274.33333333333331"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="104.33333333333333" height="82.333333333333329"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background" image="RealVision"/>
@@ -119,7 +119,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="en9-SQ-CI5" userLabel="settingsBTN">
-                                                <rect key="frame" x="112.33333333333334" y="0.0" width="260.66666666666663" height="274.33333333333331"/>
+                                                <rect key="frame" x="112.33333333333334" y="0.0" width="260.66666666666663" height="82.333333333333329"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="settings "/>
                                                 <connections>
@@ -133,10 +133,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9Dv-nm-mi7" userLabel="ButtonsSV">
-                                        <rect key="frame" x="0.0" y="282.33333333333331" width="373" height="85"/>
+                                        <rect key="frame" x="0.0" y="90.333333333333314" width="373" height="731.66666666666674"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3u8-uf-S1d" userLabel="photosBTN">
-                                                <rect key="frame" x="0.0" y="0.0" width="119" height="85"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="119" height="731.66666666666663"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="Img"/>
                                                 <connections>
@@ -144,7 +144,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ef5-QW-zpW" userLabel="liveBTN">
-                                                <rect key="frame" x="127" y="0.0" width="119" height="85"/>
+                                                <rect key="frame" x="127" y="0.0" width="119" height="731.66666666666663"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="live"/>
                                                 <connections>
@@ -152,7 +152,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRm-fh-od1" userLabel="scannerBTN">
-                                                <rect key="frame" x="254" y="0.0" width="119" height="85"/>
+                                                <rect key="frame" x="254" y="0.0" width="119" height="731.66666666666663"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="scan"/>
                                                 <connections>
@@ -167,12 +167,21 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="9Dv-nm-mi7" firstAttribute="height" secondItem="cqa-ix-G9y" secondAttribute="height" multiplier="0.31" id="DvJ-oi-PMx"/>
                                     <constraint firstItem="gl9-tx-IZz" firstAttribute="height" secondItem="NZw-Jt-B86" secondAttribute="height" multiplier="0.1" id="Gs0-pn-3kx"/>
-                                    <constraint firstItem="9Dv-nm-mi7" firstAttribute="height" secondItem="NZw-Jt-B86" secondAttribute="height" multiplier="0.1" id="NWM-Gn-TSm"/>
-                                    <constraint firstItem="cqa-ix-G9y" firstAttribute="height" secondItem="NZw-Jt-B86" secondAttribute="height" multiplier="0.5" id="lqV-Pf-ccS"/>
+                                    <constraint firstItem="9Dv-nm-mi7" firstAttribute="width" secondItem="NZw-Jt-B86" secondAttribute="width" id="RK7-WF-DLS"/>
+                                    <constraint firstItem="9Dv-nm-mi7" firstAttribute="height" secondItem="NZw-Jt-B86" secondAttribute="height" id="ivC-Oe-ICA"/>
+                                    <constraint firstItem="cqa-ix-G9y" firstAttribute="height" secondItem="NZw-Jt-B86" secondAttribute="height" multiplier="0.1" id="lqV-Pf-ccS"/>
                                 </constraints>
                             </stackView>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9wf-Op-Sf2">
+                                <rect key="frame" x="0.0" y="754" width="393" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="jr3-d0-Tkl"/>
+                                    <tabBarItem systemItem="more" id="32D-Ht-EOr"/>
+                                </items>
+                            </tabBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PD3-YW-Teo"/>
                         <color key="backgroundColor" red="0.90526587160000005" green="1" blue="0.67428029249999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -195,7 +204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6OL-tp-uti" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="129" y="-2"/>
+            <point key="canvasLocation" x="1863" y="658"/>
         </scene>
         <!--Real VisionVC-->
         <scene sceneID="tne-QT-ifu">
@@ -369,7 +378,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="973.28244274809151" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="-993" y="80"/>
         </scene>
         <!--ResetpasswordVC-->
         <scene sceneID="LOT-FJ-SAj">
@@ -657,7 +666,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kdk-5b-9if"/>
+        <segue reference="aD0-kK-HmT"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Img" width="72" height="71"/>
