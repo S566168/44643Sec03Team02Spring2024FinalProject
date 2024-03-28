@@ -232,7 +232,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="enter valid username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i0W-zP-QW1" userLabel="UserNameTF">
                                                 <rect key="frame" x="0.0" y="28.333333333333311" width="373" height="49.666666666666657"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" textContentType="username"/>
                                                 <connections>
                                                     <action selector="checkUsername:" destination="BYZ-38-t0r" eventType="editingChanged" id="1RL-2d-MUg"/>
                                                 </connections>
@@ -246,7 +246,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="enter valid password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XLC-Bb-cfb" userLabel="passwordTF">
                                                 <rect key="frame" x="0.0" y="114.33333333333331" width="373" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                 <connections>
                                                     <action selector="checkPassword:" destination="BYZ-38-t0r" eventType="editingChanged" id="gca-LB-CCm"/>
                                                 </connections>
@@ -536,7 +536,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hSY-3S-vFS" userLabel="EmailTF">
                                                 <rect key="frame" x="0.0" y="28.333333333333314" width="313" height="48"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" textContentType="username"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -552,7 +552,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gZH-vf-cx8" userLabel="passwordTF">
                                                 <rect key="frame" x="0.0" y="28.333333333333314" width="313" height="48"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -568,7 +568,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UEc-a3-3rf" userLabel="confirmPasswordTF">
                                                 <rect key="frame" x="0.0" y="28.333333333333254" width="313" height="47.666666666666657"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -666,7 +666,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="aD0-kK-HmT"/>
+        <segue reference="gnt-xj-KLj"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Img" width="72" height="71"/>
