@@ -24,6 +24,10 @@ class SettingsVC: UIViewController {
 
     
     @IBAction func share(_ sender: UIButton) {
+        let activity = UIActivityViewController(activityItems: ["/Users/akhilreddy/Documents/44643Sec03Team02Spring2024FinalProject/44643Sec03Team02Spring2024FinalProject/44643Sec03Team02Spring2024FinalProject/RealVision"], applicationActivities: nil)
+                activity.popoverPresentationController?.sourceView = self.view
+                
+                self.present(activity, animated: true, completion: nil)
     }
     
     @IBAction func help(_ sender: UIButton) {

@@ -26,7 +26,8 @@ class HomescreenVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
 
     
     
-    @IBAction func settings(_ sender: UIButton) {
+    @IBAction func SettingsBTN(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "SettingsView", sender: sender)
     }
     
     @IBAction func photos(_ sender: UIButton) {
