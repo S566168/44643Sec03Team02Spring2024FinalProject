@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomescreenVC: UIViewController {
+class HomescreenVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     @IBOutlet weak var logoBTN: UIButton!
     @IBOutlet weak var settingsBTN: UIButton!
@@ -15,7 +15,8 @@ class HomescreenVC: UIViewController {
     @IBOutlet weak var liveBTN: UIButton!
     @IBOutlet weak var scannerBTN: UIButton!
     
-
+    @IBOutlet weak var imageView: UIImageView!
+    let imagePicker = UIImagePickerController()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,7 +30,20 @@ class HomescreenVC: UIViewController {
     }
     
     @IBAction func photos(_ sender: UIButton) {
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true, completion: nil)
     }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+                imageView.image = pickedImage // Use the imageView outlet
+            }
+            dismiss(animated: true, completion: nil)
+        }
+
+        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+            dismiss(animated: true, completion: nil)
+        }
     
     @IBAction func live(_ sender: UIButton) {
     }
