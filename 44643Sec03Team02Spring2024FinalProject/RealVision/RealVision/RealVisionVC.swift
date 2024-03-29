@@ -32,6 +32,9 @@ class RealVisionVC: UIViewController {
     @IBOutlet weak var loginBTN: UIButton!
     
     
+    @IBOutlet weak var facebookBTN: UIButton!
+    @IBOutlet weak var googleBTN: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -93,6 +96,16 @@ class RealVisionVC: UIViewController {
     @IBAction func signUpBTN(_ sender: UIButton) {
         self.performSegue(withIdentifier: "SignupView", sender: sender)
     }
+    
+    
+    
+    
+    @IBAction func facebook(_ sender: UIButton) {
+    }
+    
+    @IBAction func google(_ sender: UIButton) {
+    }
+    
     
 }
 
