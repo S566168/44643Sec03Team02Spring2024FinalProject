@@ -31,6 +31,7 @@ class SignupVC: UIViewController {
     @IBAction func createAccount(_ sender: UIButton) {
         if let email = emailTF.text, let password = passwordTF.text, let username = usernameTF.text, let conPassword = confirmPwdTF.text{
                                 if username == ""{
+                                    openAlert(title: "Alert", message: "Please enter username", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in }])
                                     print("Please enter username")
                                 }else if !email.validateEmailId(){
                                     openAlert(title: "Alert", message: "Please enter valid email", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in }])
