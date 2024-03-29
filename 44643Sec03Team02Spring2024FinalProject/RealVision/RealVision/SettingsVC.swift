@@ -28,10 +28,13 @@ class SettingsVC: UIViewController {
                 activity.popoverPresentationController?.sourceView = self.view
                 
                 self.present(activity, animated: true, completion: nil)
+        
     }
     
     @IBAction func help(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "HelpView", sender: sender)
     }
+    
     
     @IBAction func privacy(_ sender: UIButton) {
     }

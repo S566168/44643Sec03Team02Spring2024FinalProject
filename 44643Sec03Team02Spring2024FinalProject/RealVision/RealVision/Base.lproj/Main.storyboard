@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -88,24 +88,28 @@
                         <outlet property="privacyBTN" destination="afu-Hb-hzH" id="2h3-vp-5Z1"/>
                         <outlet property="shareBTN" destination="Qzf-NT-ekl" id="5Kz-HI-HCp"/>
                         <outlet property="termsBTN" destination="nOd-sJ-7Qy" id="RIt-kR-K2t"/>
+                        <segue destination="s4c-8Z-kSH" kind="show" identifier="HelpView" id="5ND-CY-hHl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="He7-s9-CyW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1465" y="882"/>
         </scene>
-        <!--View Controller-->
+        <!--HelpVC-->
         <scene sceneID="ie8-FH-wCF">
             <objects>
-                <viewController id="s4c-8Z-kSH" sceneMemberID="viewController">
+                <viewController id="s4c-8Z-kSH" customClass="HelpVC" customModule="RealVision" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rOf-0D-Xag">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yh4-4Y-Zrl">
-                                <rect key="frame" x="20" y="309" width="353" height="209"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <rect key="frame" x="20" y="250" width="353" height="292"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="Message:" destination="LtT-g9-ONg" eventType="editingDidEnd" id="KNo-Cg-c9B"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact us" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glV-6l-Gd5">
                                 <rect key="frame" x="119" y="196" width="159" height="41"/>
@@ -133,10 +137,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Send"/>
+                                <connections>
+                                    <action selector="Send:" destination="s4c-8Z-kSH" eventType="touchUpInside" id="mrX-kH-3V2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="llI-tU-zlU"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.90526587160000005" green="1" blue="0.67428029249999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="yh4-4Y-Zrl" firstAttribute="leading" secondItem="llI-tU-zlU" secondAttribute="leading" constant="20" id="Q1a-BB-Hum"/>
                             <constraint firstItem="yh4-4Y-Zrl" firstAttribute="top" secondItem="llI-tU-zlU" secondAttribute="top" constant="250" id="R8G-De-RSg"/>
@@ -144,8 +151,14 @@
                             <constraint firstItem="llI-tU-zlU" firstAttribute="bottom" secondItem="yh4-4Y-Zrl" secondAttribute="bottom" constant="300" id="wc1-d6-Yez"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="eGj-UA-8kX"/>
+                    <connections>
+                        <outlet property="Message" destination="yh4-4Y-Zrl" id="BY6-ec-N9d"/>
+                        <outlet property="sendBTN" destination="r4c-gp-4hz" id="qUR-2x-kKl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KJB-5k-mpf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="LtT-g9-ONg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2442" y="872"/>
         </scene>
@@ -158,36 +171,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NZw-Jt-B86" userLabel="BigContainer">
-                                <rect key="frame" x="30" y="30" width="333" height="782"/>
+                                <rect key="frame" x="30" y="30" width="333" height="781.66666666666663"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cqa-ix-G9y" userLabel="Top Buttons">
-                                        <rect key="frame" x="0.0" y="0.0" width="333" height="156.33333333333334"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="trailing" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gl9-tx-IZz" userLabel="logoBTN">
-                                                <rect key="frame" x="0.0" y="0.0" width="250" height="156.33333333333334"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain">
-                                                    <backgroundConfiguration key="background" image="RealVision"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="LogoBTN:" destination="sC7-tU-LxE" eventType="touchUpInside" id="nmP-ZG-Kcs"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Do-O8-mHI" userLabel="SettingsBTN">
-                                                <rect key="frame" x="258" y="0.0" width="75" height="156.33333333333334"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                                <connections>
-                                                    <action selector="SettingsBTN:" destination="sC7-tU-LxE" eventType="touchUpInside" id="lv2-PF-iae"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gl9-tx-IZz" userLabel="logoBTN">
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="234.66666666666666"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <backgroundConfiguration key="background" image="RealVision"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="LogoBTN:" destination="sC7-tU-LxE" eventType="touchUpInside" id="nmP-ZG-Kcs"/>
+                                        </connections>
+                                    </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9Dv-nm-mi7" userLabel="ButtonsSV">
-                                        <rect key="frame" x="0.0" y="164.33333333333331" width="333" height="617.66666666666674"/>
+                                        <rect key="frame" x="0.0" y="242.66666666666666" width="333" height="312.66666666666674"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3u8-uf-S1d" userLabel="photosBTN">
-                                                <rect key="frame" x="0.0" y="0.0" width="88" height="617.66666666666663"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="88" height="312.66666666666669"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="Img"/>
                                                 <connections>
@@ -195,7 +195,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ef5-QW-zpW" userLabel="liveBTN">
-                                                <rect key="frame" x="96" y="0.0" width="88" height="617.66666666666663"/>
+                                                <rect key="frame" x="96" y="0.0" width="88" height="312.66666666666669"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="live"/>
                                                 <connections>
@@ -203,7 +203,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRm-fh-od1" userLabel="scannerBTN">
-                                                <rect key="frame" x="192" y="0.0" width="88" height="617.66666666666663"/>
+                                                <rect key="frame" x="192" y="0.0" width="88" height="312.66666666666669"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="scan"/>
                                                 <connections>
@@ -211,7 +211,7 @@
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MO5-mX-lf3">
-                                                <rect key="frame" x="288" y="0.0" width="45" height="617.66666666666663"/>
+                                                <rect key="frame" x="288" y="0.0" width="45" height="312.66666666666669"/>
                                             </imageView>
                                         </subviews>
                                         <constraints>
@@ -219,12 +219,19 @@
                                             <constraint firstItem="YRm-fh-od1" firstAttribute="width" secondItem="Ef5-QW-zpW" secondAttribute="width" id="qd0-9M-bie"/>
                                         </constraints>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Do-O8-mHI" userLabel="SettingsBTN">
+                                        <rect key="frame" x="0.0" y="563.33333333333337" width="333" height="218.33333333333337"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="SettingsBTN:" destination="sC7-tU-LxE" eventType="touchUpInside" id="lv2-PF-iae"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="gl9-tx-IZz" firstAttribute="height" secondItem="NZw-Jt-B86" secondAttribute="height" multiplier="0.1" id="Gs0-pn-3kx"/>
-                                    <constraint firstItem="9Dv-nm-mi7" firstAttribute="width" secondItem="NZw-Jt-B86" secondAttribute="width" id="RK7-WF-DLS"/>
-                                    <constraint firstItem="9Dv-nm-mi7" firstAttribute="height" secondItem="NZw-Jt-B86" secondAttribute="height" id="ivC-Oe-ICA"/>
-                                    <constraint firstItem="cqa-ix-G9y" firstAttribute="height" secondItem="NZw-Jt-B86" secondAttribute="height" multiplier="0.2" id="lqV-Pf-ccS"/>
+                                    <constraint firstItem="9Dv-nm-mi7" firstAttribute="height" secondItem="NZw-Jt-B86" secondAttribute="height" multiplier="0.4" id="Uxn-iA-reI"/>
+                                    <constraint firstItem="gl9-tx-IZz" firstAttribute="height" secondItem="NZw-Jt-B86" secondAttribute="height" multiplier="0.3" id="uQx-dp-Gtt"/>
+                                    <constraint firstItem="4Do-O8-mHI" firstAttribute="height" secondItem="NZw-Jt-B86" secondAttribute="height" multiplier="0.2" id="xGh-dP-n2F"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -246,7 +253,7 @@
                         <outlet property="scannerBTN" destination="YRm-fh-od1" id="jcw-ne-DN1"/>
                         <outlet property="settingsBTN" destination="4Do-O8-mHI" id="l9A-xP-9qW"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="LoginView" id="aD0-kK-HmT"/>
-                        <segue destination="xea-RS-fZm" kind="show" identifier="SettingsView" id="Pg9-Rc-GAv"/>
+                        <segue destination="xea-RS-fZm" kind="show" identifier="SettingsView" id="LUI-oN-4Ji"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6OL-tp-uti" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -447,16 +454,16 @@
                                 <rect key="frame" x="20" y="40" width="353" height="782"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RealVision" translatesAutoresizingMaskIntoConstraints="NO" id="INC-Iw-uzO" userLabel="RealVision">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="172"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="445.33333333333331"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset Password" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGV-Yi-MbA">
-                                        <rect key="frame" x="0.0" y="180" width="353" height="78.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="453.33333333333331" width="353" height="77.999999999999943"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bd3-xJ-m8v" userLabel="emailSV">
-                                        <rect key="frame" x="0.0" y="266.33333333333331" width="353" height="78"/>
+                                        <rect key="frame" x="0.0" y="539.33333333333337" width="353" height="78.333333333333371"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your Email" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSL-49-d6Z">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="20.333333333333332"/>
@@ -465,7 +472,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="your email id" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pNC-08-uLm">
-                                                <rect key="frame" x="0.0" y="28.333333333333368" width="353" height="49.666666666666657"/>
+                                                <rect key="frame" x="0.0" y="28.333333333333258" width="353" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -475,10 +482,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dgT-is-c1p" userLabel="ButtonsSV">
-                                        <rect key="frame" x="0.0" y="352.33333333333326" width="353" height="429.66666666666674"/>
+                                        <rect key="frame" x="0.0" y="625.66666666666663" width="353" height="156.33333333333337"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrc-ka-Ppq">
-                                                <rect key="frame" x="0.0" y="0.0" width="353" height="211"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="74"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Reset"/>
                                                 <connections>
@@ -486,7 +493,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qd8-Hd-djy">
-                                                <rect key="frame" x="0.0" y="219.00000000000006" width="353" height="210.66666666666669"/>
+                                                <rect key="frame" x="0.0" y="82" width="353" height="74.333333333333314"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
                                                 <connections>
