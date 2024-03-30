@@ -23,6 +23,7 @@ Spirnt#05
 8.In the third Commit(Sushma Mundlamuri) created screen for privacy & policy
 
 9.In the third Commit(UdayKiranReddy Devarapally) Added view controller for help button.
+
 <img width="1440" alt="Screenshot 2024-03-29 at 9 45 45 PM" src="https://github.com/Akhil2402/44643Sec03Team02Spring2024FinalProject/assets/143120291/5f3ccc26-cbfa-486c-ac5f-b62d189f6e05">
 
 
