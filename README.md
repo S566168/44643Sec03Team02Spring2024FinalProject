@@ -4,6 +4,29 @@ Team Members.
 2.Sushma Mundlamuri (S559298)
 3.UdayKiranReddy Devarapally (S567161)
 
+Spirnt#05
+1.In the first Commit(Akhil Reddy Depa) Added logic for Signup page.
+
+2.In the first Commit(Sushma Mundlamuri) firebase added and modifications done in screens
+
+3.In the first Commit(UdayKiranReddy Devarapally) Added functionality to the forgot password and the reset password
+
+4.In the second Commit(Akhil Reddy Depa) Added code for share button in settings
+
+5.In the second Commit(Sushma Mundlamuri) added some functionality in home screen for image picking.
+
+6.In the second Commit(UdayKiranReddy Devarapally) Added outlets and actions of facebook and google buttons.
+
+7.In the third Commit(Akhil Reddy Depa) connected help to setting through segue and added code for help.
+
+8.In the third Commit(Sushma Mundlamuri) created screen for privacy & policy
+
+9.In the third Commit(UdayKiranReddy Devarapally) Added view controller for help button.
+<img width="1440" alt="Screenshot 2024-03-29 at 9 45 45 PM" src="https://github.com/Akhil2402/44643Sec03Team02Spring2024FinalProject/assets/143120291/5f3ccc26-cbfa-486c-ac5f-b62d189f6e05">
+
+
+
+
 Spirnt#04
 
 1.In the first Commit(Akhil Reddy Depa) Added google and facebook buttons in login page and also added functionalities to validate email and password in the login page.
