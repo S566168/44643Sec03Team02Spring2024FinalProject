@@ -13,8 +13,7 @@ class HomescreenVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     @IBOutlet weak var settingsBTN: UIButton!
     @IBOutlet weak var photosBTN: UIButton!
     @IBOutlet weak var liveBTN: UIButton!
-    @IBOutlet weak var scannerBTN: UIButton!
-    
+
     @IBOutlet weak var imageView: UIImageView!
     let imagePicker = UIImagePickerController()
     override func viewDidLoad() {
@@ -49,8 +48,7 @@ class HomescreenVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     @IBAction func live(_ sender: UIButton) {
     }
     
-    @IBAction func scanner(_ sender: UIButton) {
-    }
+
     
     @IBAction func LogoBTN(_ sender: UIButton) {
         self.performSegue(withIdentifier: "LoginView", sender: sender)

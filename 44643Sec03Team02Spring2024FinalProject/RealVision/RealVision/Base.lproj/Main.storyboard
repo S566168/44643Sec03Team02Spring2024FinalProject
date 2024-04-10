@@ -109,7 +109,7 @@
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XSY-k9-d3P">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="802"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Privacy Policy of RealVision
 This Application collects some Personal Data from its Users.
 
@@ -257,6 +257,7 @@ iubenda hosts this content and only collects the Personal Data strictly necessar
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yh4-4Y-Zrl">
                                 <rect key="frame" x="20" y="250" width="353" height="292"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -323,7 +324,7 @@ iubenda hosts this content and only collects the Personal Data strictly necessar
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NZw-Jt-B86" userLabel="BigContainer">
-                                <rect key="frame" x="30" y="30" width="333" height="781.66666666666663"/>
+                                <rect key="frame" x="30" y="30" width="333" height="782"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gl9-tx-IZz" userLabel="logoBTN">
                                         <rect key="frame" x="0.0" y="0.0" width="333" height="234.66666666666666"/>
@@ -335,11 +336,11 @@ iubenda hosts this content and only collects the Personal Data strictly necessar
                                             <action selector="LogoBTN:" destination="sC7-tU-LxE" eventType="touchUpInside" id="nmP-ZG-Kcs"/>
                                         </connections>
                                     </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9Dv-nm-mi7" userLabel="ButtonsSV">
-                                        <rect key="frame" x="0.0" y="242.66666666666666" width="333" height="312.66666666666674"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9Dv-nm-mi7" userLabel="ButtonsSV">
+                                        <rect key="frame" x="0.0" y="242.66666666666669" width="333" height="156.33333333333331"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3u8-uf-S1d" userLabel="photosBTN">
-                                                <rect key="frame" x="0.0" y="0.0" width="88" height="312.66666666666669"/>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3u8-uf-S1d" userLabel="photosBTN">
+                                                <rect key="frame" x="0.0" y="0.0" width="105.66666666666667" height="156.33333333333334"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="Img"/>
                                                 <connections>
@@ -347,53 +348,43 @@ iubenda hosts this content and only collects the Personal Data strictly necessar
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ef5-QW-zpW" userLabel="liveBTN">
-                                                <rect key="frame" x="96" y="0.0" width="88" height="312.66666666666669"/>
+                                                <rect key="frame" x="113.66666666666666" y="0.0" width="105.66666666666666" height="156.33333333333334"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="live"/>
                                                 <connections>
                                                     <action selector="live:" destination="sC7-tU-LxE" eventType="touchUpInside" id="tEp-Nh-B4G"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRm-fh-od1" userLabel="scannerBTN">
-                                                <rect key="frame" x="192" y="0.0" width="88" height="312.66666666666669"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Do-O8-mHI" userLabel="SettingsBTN">
+                                                <rect key="frame" x="227.33333333333329" y="0.0" width="105.66666666666666" height="156.33333333333334"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="scan"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="settings "/>
                                                 <connections>
-                                                    <action selector="scanner:" destination="sC7-tU-LxE" eventType="touchUpInside" id="LrV-cl-Hza"/>
+                                                    <action selector="SettingsBTN:" destination="sC7-tU-LxE" eventType="touchUpInside" id="lv2-PF-iae"/>
                                                 </connections>
                                             </button>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MO5-mX-lf3">
-                                                <rect key="frame" x="288" y="0.0" width="45" height="312.66666666666669"/>
-                                            </imageView>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="3u8-uf-S1d" firstAttribute="width" secondItem="Ef5-QW-zpW" secondAttribute="width" id="Hh0-PM-uqB"/>
-                                            <constraint firstItem="YRm-fh-od1" firstAttribute="width" secondItem="Ef5-QW-zpW" secondAttribute="width" id="qd0-9M-bie"/>
                                         </constraints>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Do-O8-mHI" userLabel="SettingsBTN">
-                                        <rect key="frame" x="0.0" y="563.33333333333337" width="333" height="218.33333333333337"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                        <connections>
-                                            <action selector="SettingsBTN:" destination="sC7-tU-LxE" eventType="touchUpInside" id="lv2-PF-iae"/>
-                                        </connections>
-                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MO5-mX-lf3">
+                                        <rect key="frame" x="0.0" y="407" width="333" height="375"/>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="9Dv-nm-mi7" firstAttribute="height" secondItem="NZw-Jt-B86" secondAttribute="height" multiplier="0.4" id="Uxn-iA-reI"/>
-                                    <constraint firstItem="gl9-tx-IZz" firstAttribute="height" secondItem="NZw-Jt-B86" secondAttribute="height" multiplier="0.3" id="uQx-dp-Gtt"/>
-                                    <constraint firstItem="4Do-O8-mHI" firstAttribute="height" secondItem="NZw-Jt-B86" secondAttribute="height" multiplier="0.2" id="xGh-dP-n2F"/>
+                                    <constraint firstItem="gl9-tx-IZz" firstAttribute="height" secondItem="NZw-Jt-B86" secondAttribute="height" multiplier="0.3" id="Dk1-LT-ByB"/>
+                                    <constraint firstItem="9Dv-nm-mi7" firstAttribute="height" secondItem="NZw-Jt-B86" secondAttribute="height" multiplier="0.2" id="LDZ-Eh-Qyq"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PD3-YW-Teo"/>
                         <color key="backgroundColor" red="0.90526587160000005" green="1" blue="0.67428029249999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="PD3-YW-Teo" firstAttribute="bottom" secondItem="NZw-Jt-B86" secondAttribute="bottom" constant="30" id="BIV-VL-Z7z"/>
+                            <constraint firstItem="NZw-Jt-B86" firstAttribute="top" secondItem="PD3-YW-Teo" secondAttribute="top" constant="30" id="2t4-V9-W7B"/>
                             <constraint firstItem="PD3-YW-Teo" firstAttribute="trailing" secondItem="NZw-Jt-B86" secondAttribute="trailing" constant="30" id="MNI-jB-2W7"/>
-                            <constraint firstItem="NZw-Jt-B86" firstAttribute="top" secondItem="PD3-YW-Teo" secondAttribute="top" constant="30" id="UD5-xc-h77"/>
                             <constraint firstItem="NZw-Jt-B86" firstAttribute="leading" secondItem="PD3-YW-Teo" secondAttribute="leading" constant="30" id="WbN-wC-gqA"/>
+                            <constraint firstItem="PD3-YW-Teo" firstAttribute="bottom" secondItem="NZw-Jt-B86" secondAttribute="bottom" constant="30" id="ceh-qq-uqg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qBl-N5-Xda"/>
@@ -402,7 +393,6 @@ iubenda hosts this content and only collects the Personal Data strictly necessar
                         <outlet property="liveBTN" destination="Ef5-QW-zpW" id="ut0-UX-1dv"/>
                         <outlet property="logoBTN" destination="gl9-tx-IZz" id="SnY-SU-cLY"/>
                         <outlet property="photosBTN" destination="3u8-uf-S1d" id="Dzx-kl-daQ"/>
-                        <outlet property="scannerBTN" destination="YRm-fh-od1" id="jcw-ne-DN1"/>
                         <outlet property="settingsBTN" destination="4Do-O8-mHI" id="l9A-xP-9qW"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="LoginView" id="aD0-kK-HmT"/>
                         <segue destination="xea-RS-fZm" kind="show" identifier="SettingsView" id="LUI-oN-4Ji"/>
@@ -606,16 +596,16 @@ iubenda hosts this content and only collects the Personal Data strictly necessar
                                 <rect key="frame" x="20" y="40" width="353" height="782"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RealVision" translatesAutoresizingMaskIntoConstraints="NO" id="INC-Iw-uzO" userLabel="RealVision">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="445.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="172"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset Password" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGV-Yi-MbA">
-                                        <rect key="frame" x="0.0" y="453.33333333333331" width="353" height="77.999999999999943"/>
+                                        <rect key="frame" x="0.0" y="180" width="353" height="78.333333333333314"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bd3-xJ-m8v" userLabel="emailSV">
-                                        <rect key="frame" x="0.0" y="539.33333333333337" width="353" height="78.333333333333371"/>
+                                        <rect key="frame" x="0.0" y="266.33333333333331" width="353" height="78"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your Email" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSL-49-d6Z">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="20.333333333333332"/>
@@ -624,7 +614,7 @@ iubenda hosts this content and only collects the Personal Data strictly necessar
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="your email id" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pNC-08-uLm">
-                                                <rect key="frame" x="0.0" y="28.333333333333258" width="353" height="50"/>
+                                                <rect key="frame" x="0.0" y="28.333333333333368" width="353" height="49.666666666666657"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -634,10 +624,10 @@ iubenda hosts this content and only collects the Personal Data strictly necessar
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dgT-is-c1p" userLabel="ButtonsSV">
-                                        <rect key="frame" x="0.0" y="625.66666666666663" width="353" height="156.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="352.33333333333326" width="353" height="429.66666666666674"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrc-ka-Ppq">
-                                                <rect key="frame" x="0.0" y="0.0" width="353" height="74"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="211"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Reset"/>
                                                 <connections>
@@ -645,7 +635,7 @@ iubenda hosts this content and only collects the Personal Data strictly necessar
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qd8-Hd-djy">
-                                                <rect key="frame" x="0.0" y="82" width="353" height="74.333333333333314"/>
+                                                <rect key="frame" x="0.0" y="219.00000000000006" width="353" height="210.66666666666669"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
                                                 <connections>
@@ -862,7 +852,7 @@ iubenda hosts this content and only collects the Personal Data strictly necessar
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gnt-xj-KLj"/>
+        <segue reference="aD0-kK-HmT"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Img" width="72" height="71"/>
@@ -872,7 +862,7 @@ iubenda hosts this content and only collects the Personal Data strictly necessar
         <image name="helpbutton" width="32" height="32"/>
         <image name="live" width="64" height="64"/>
         <image name="privacy" width="32" height="32"/>
-        <image name="scan" width="64" height="64"/>
+        <image name="settings " width="48" height="48"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
