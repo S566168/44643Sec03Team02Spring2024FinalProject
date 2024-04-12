@@ -939,7 +939,7 @@ Please note that these terms and conditions are for illustrative purposes only a
         <!--LiveVC-->
         <scene sceneID="Q91-pF-iKY">
             <objects>
-                <viewController modalPresentationStyle="overFullScreen" id="Xyy-4c-b7h" customClass="LiveVC" customModule="S566168ShopcyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overFullScreen" id="Xyy-4c-b7h" customClass="LiveVC" customModule="RealVision" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y7Y-u4-R14">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -984,8 +984,10 @@ Please note that these terms and conditions are for illustrative purposes only a
                     <navigationItem key="navigationItem" id="ewd-2e-Jrh"/>
                     <connections>
                         <outlet property="Accuracy" destination="0Gz-bH-HhQ" id="BbX-gh-Jyb"/>
-                        <outlet property="Live" destination="tv9-Dx-P56" id="wau-Z0-gMu"/>
+                        <outlet property="Live" destination="uSX-ES-cOW" id="zD6-RP-eh1"/>
                         <outlet property="Objectdescription" destination="uSX-ES-cOW" id="miK-D7-fQ4"/>
+                        <outlet property="accuracy" destination="0Gz-bH-HhQ" id="xRF-ZG-dLm"/>
+                        <outlet property="objectDescription" destination="uSX-ES-cOW" id="AfB-bt-CZe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b6F-js-IeW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

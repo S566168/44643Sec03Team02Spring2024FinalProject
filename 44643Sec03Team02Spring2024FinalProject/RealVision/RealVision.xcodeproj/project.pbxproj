@@ -11,6 +11,7 @@
 		726A95A62B9ACC170085492E /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726A95A52B9ACC170085492E /* SettingsVC.swift */; };
 		72D9970E2B84839D004051E2 /* RealVisionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D9970D2B84839D004051E2 /* RealVisionVC.swift */; };
 		72D997112B84856E004051E2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 72D997102B84856E004051E2 /* Lottie */; };
+		953944EC2BC9CD85001FC871 /* LiveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953944EB2BC9CD85001FC871 /* LiveVC.swift */; };
 		9544896A2BB380410050F01B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 954489692BB380410050F01B /* GoogleService-Info.plist */; };
 		9544896D2BB383140050F01B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 9544896C2BB383140050F01B /* FirebaseAnalytics */; };
 		9544896F2BB383140050F01B /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 9544896E2BB383140050F01B /* FirebaseDatabase */; };
@@ -61,6 +62,7 @@
 		721FCD612BC8FD3B00B09922 /* TermsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsVC.swift; sourceTree = "<group>"; };
 		726A95A52B9ACC170085492E /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		72D9970D2B84839D004051E2 /* RealVisionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealVisionVC.swift; sourceTree = "<group>"; };
+		953944EB2BC9CD85001FC871 /* LiveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveVC.swift; sourceTree = "<group>"; };
 		954489692BB380410050F01B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		959B2A402BB7AE7500325035 /* PrivacyPolicyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyVC.swift; sourceTree = "<group>"; };
 		D2250EA82BB7671E008DAB56 /* HelpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpVC.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				D27CC8972B996ADB00939C55 /* ResetpasswordVC.swift */,
 				D2250EA82BB7671E008DAB56 /* HelpVC.swift */,
 				D2AA4E722B82E717007D6FFC /* Main.storyboard */,
+				953944EB2BC9CD85001FC871 /* LiveVC.swift */,
 				721FCD612BC8FD3B00B09922 /* TermsVC.swift */,
 				959B2A402BB7AE7500325035 /* PrivacyPolicyVC.swift */,
 				D2AA4E752B82E718007D6FFC /* Assets.xcassets */,
@@ -352,6 +355,7 @@
 				959B2A412BB7AE7500325035 /* PrivacyPolicyVC.swift in Sources */,
 				D2250EA92BB7671E008DAB56 /* HelpVC.swift in Sources */,
 				D23FF1162BC8F137000FA792 /* AnimationVC.swift in Sources */,
+				953944EC2BC9CD85001FC871 /* LiveVC.swift in Sources */,
 				D242298C2B97CC990081737E /* UIViewController + Extension.swift in Sources */,
 				D2AA4E6F2B82E717007D6FFC /* SceneDelegate.swift in Sources */,
 			);
