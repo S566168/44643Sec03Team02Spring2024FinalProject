@@ -20,11 +20,11 @@ class LiveVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     
     @IBOutlet weak var Accuracy: UILabel!
     
-    
+    var model = Resnet50().model
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //var model = Resnet50().model
+        
         let captureSession = AVCaptureSession()
                 
                 guard let captureDevice = AVCaptureDevice.default(for: .video) else { return }
@@ -49,6 +49,30 @@ class LiveVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
                 dataOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "videoQueue"))
                 captureSession.addOutput(dataOutput)
     }
+    
+    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+            guard let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
+            
+            guard let model = try? VNCoreMLModel(for: model) else { return }
+            let request = VNCoreMLRequest(model: model) { (finishedReq, err) in
+                
+                guard let results = finishedReq.results as? [VNClassificationObservation] else {return}
+                guard let firstObservation = results.first else {return}
+                
+                let name: String = firstObservation.identifier
+                let acc: Int = Int(firstObservation.confidence * 100)
+                
+                DispatchQueue.main.async {
+                    self.Objectdescription.text = name
+                    self.Accuracy.text = "Accuracy: \(acc)%"
+                }
+                
+            }
+            
+            try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
+            
+        }
+
     
 
     /*
