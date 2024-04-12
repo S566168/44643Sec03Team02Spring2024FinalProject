@@ -297,7 +297,7 @@ iubenda hosts this content and only collects the Personal Data strictly necessar
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="llI-tU-zlU"/>
-                        <color key="backgroundColor" red="0.90526587160000005" green="1" blue="0.67428029249999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.90588235294117647" green="1" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="yh4-4Y-Zrl" firstAttribute="leading" secondItem="llI-tU-zlU" secondAttribute="leading" constant="20" id="Q1a-BB-Hum"/>
                             <constraint firstItem="yh4-4Y-Zrl" firstAttribute="top" secondItem="llI-tU-zlU" secondAttribute="top" constant="250" id="R8G-De-RSg"/>
@@ -329,8 +329,8 @@ iubenda hosts this content and only collects the Personal Data strictly necessar
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZL-MX-XJ4">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="802"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <mutableString key="text">Here are terms and conditions for an RealVision app:
+                                        <color key="backgroundColor" red="0.90588235289999997" green="1" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <string key="text">Here are terms and conditions for an RealVision app:
 
 1. **User Agreement**:
    By using the Object Detection app ("the App"), you agree to comply with and be bound by the following terms and conditions.
@@ -362,8 +362,8 @@ iubenda hosts this content and only collects the Personal Data strictly necessar
 10. **Contact Information**:
     If you have any questions or concerns about these terms and conditions, please contact us at [contact@email.com].
 
-Please note that these terms and conditions are for illustrative purposes only and may need to be customized to fit the specific features and requirements of your object detection app, as well as to comply with applicable laws and regulations in your jurisdiction. It is recommended to seek legal advice when drafting terms and conditions for your app.</mutableString>
-                                        <color key="textColor" systemColor="labelColor"/>
+Please note that these terms and conditions are for illustrative purposes only and may need to be customized to fit the specific features and requirements of your object detection app, as well as to comply with applicable laws and regulations in your jurisdiction. It is recommended to seek legal advice when drafting terms and conditions for your app.</string>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -371,7 +371,7 @@ Please note that these terms and conditions are for illustrative purposes only a
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Kn8-7n-KaB"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.90588235289999997" green="1" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Kn8-7n-KaB" firstAttribute="trailing" secondItem="tFC-jf-oVs" secondAttribute="trailing" constant="20" id="45y-O5-gtn"/>
                             <constraint firstItem="tFC-jf-oVs" firstAttribute="top" secondItem="Kn8-7n-KaB" secondAttribute="top" constant="20" id="CoY-27-RsD"/>
@@ -423,6 +423,7 @@ Please note that these terms and conditions are for illustrative purposes only a
                                                 <buttonConfiguration key="configuration" style="plain" image="live"/>
                                                 <connections>
                                                     <action selector="live:" destination="sC7-tU-LxE" eventType="touchUpInside" id="tEp-Nh-B4G"/>
+                                                    <segue destination="Xyy-4c-b7h" kind="show" id="78U-nV-Cjt"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Do-O8-mHI" userLabel="SettingsBTN">
@@ -935,9 +936,65 @@ Please note that these terms and conditions are for illustrative purposes only a
             </objects>
             <point key="canvasLocation" x="-1970" y="80"/>
         </scene>
+        <!--LiveVC-->
+        <scene sceneID="Q91-pF-iKY">
+            <objects>
+                <viewController modalPresentationStyle="overFullScreen" id="Xyy-4c-b7h" customClass="LiveVC" customModule="S566168ShopcyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y7Y-u4-R14">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tv9-Dx-P56" userLabel="LaunchLAV">
+                                <rect key="frame" x="0.0" y="681.66666666666663" width="393" height="170.33333333333337"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Object Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSX-ES-cOW">
+                                        <rect key="frame" x="20" y="-12" width="353" height="100.33333333333333"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accuracy : 0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Gz-bH-HhQ">
+                                        <rect key="frame" x="20" y="98.333333333333371" width="353" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="uSX-ES-cOW" secondAttribute="bottom" constant="82.000000000000043" id="3KC-1p-b9t"/>
+                                    <constraint firstItem="0Gz-bH-HhQ" firstAttribute="leading" secondItem="tv9-Dx-P56" secondAttribute="leading" constant="20" id="EZZ-O4-vTE"/>
+                                    <constraint firstItem="uSX-ES-cOW" firstAttribute="leading" secondItem="tv9-Dx-P56" secondAttribute="leading" constant="20" id="Ig4-up-MbE"/>
+                                    <constraint firstAttribute="trailing" secondItem="0Gz-bH-HhQ" secondAttribute="trailing" constant="20" id="OxC-P5-hNa"/>
+                                    <constraint firstItem="uSX-ES-cOW" firstAttribute="top" secondItem="tv9-Dx-P56" secondAttribute="top" constant="-12" id="XDT-OV-cOk"/>
+                                    <constraint firstItem="0Gz-bH-HhQ" firstAttribute="top" secondItem="uSX-ES-cOW" secondAttribute="bottom" constant="10" id="avm-ES-bli"/>
+                                    <constraint firstAttribute="trailing" secondItem="uSX-ES-cOW" secondAttribute="trailing" constant="20" id="n1G-2R-5Tb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="B99-8D-bN8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tv9-Dx-P56" firstAttribute="centerX" secondItem="y7Y-u4-R14" secondAttribute="centerX" id="DJq-9P-Lsu"/>
+                            <constraint firstAttribute="bottom" secondItem="tv9-Dx-P56" secondAttribute="bottom" id="Eou-hy-Hha"/>
+                            <constraint firstItem="tv9-Dx-P56" firstAttribute="height" secondItem="y7Y-u4-R14" secondAttribute="height" multiplier="0.2" id="GLg-Gx-1Gv"/>
+                            <constraint firstItem="tv9-Dx-P56" firstAttribute="width" secondItem="y7Y-u4-R14" secondAttribute="width" id="qMl-Yf-CAR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ewd-2e-Jrh"/>
+                    <connections>
+                        <outlet property="Accuracy" destination="0Gz-bH-HhQ" id="BbX-gh-Jyb"/>
+                        <outlet property="Live" destination="tv9-Dx-P56" id="wau-Z0-gMu"/>
+                        <outlet property="Objectdescription" destination="uSX-ES-cOW" id="miK-D7-fQ4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b6F-js-IeW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="931" y="80"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kdk-5b-9if"/>
+        <segue reference="gnt-xj-KLj"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Img" width="72" height="71"/>
