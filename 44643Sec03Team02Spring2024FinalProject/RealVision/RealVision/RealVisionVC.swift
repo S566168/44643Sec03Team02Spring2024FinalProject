@@ -15,25 +15,10 @@ class RealVisionVC: UIViewController {
     @IBOutlet weak var passwordLBL: UILabel!
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
-    @IBOutlet weak var LaunchLAV: LottieAnimationView!{
-        didSet {
-            LaunchLAV.animation = LottieAnimation.named("Detection")
-            LaunchLAV.loopMode = .playOnce
-            LaunchLAV.alpha = 1
-            LaunchLAV.play { [weak self] _ in
-                guard let self = self else { return }
-                DispatchQueue.main.async {
-                    self.LaunchLAV.alpha = 0
-                }
-            }
-        }
-    }
+
     
     @IBOutlet weak var loginBTN: UIButton!
     
-    
-    @IBOutlet weak var facebookBTN: UIButton!
-    @IBOutlet weak var googleBTN: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

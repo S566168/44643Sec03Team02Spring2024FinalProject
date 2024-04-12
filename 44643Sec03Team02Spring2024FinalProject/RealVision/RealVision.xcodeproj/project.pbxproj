@@ -21,6 +21,7 @@
 		9544897F2BB4CB840050F01B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9544897E2BB4CB840050F01B /* FirebaseAuth */; };
 		959B2A412BB7AE7500325035 /* PrivacyPolicyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959B2A402BB7AE7500325035 /* PrivacyPolicyVC.swift */; };
 		D2250EA92BB7671E008DAB56 /* HelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2250EA82BB7671E008DAB56 /* HelpVC.swift */; };
+		D23FF1162BC8F137000FA792 /* AnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23FF1152BC8F137000FA792 /* AnimationVC.swift */; };
 		D242298A2B97CC6A0081737E /* UIAlertController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24229892B97CC6A0081737E /* UIAlertController + Extension.swift */; };
 		D242298C2B97CC990081737E /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D242298B2B97CC990081737E /* UIViewController + Extension.swift */; };
 		D242298E2B97CCB50081737E /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D242298D2B97CCB50081737E /* String + Extension.swift */; };
@@ -61,6 +62,7 @@
 		954489692BB380410050F01B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		959B2A402BB7AE7500325035 /* PrivacyPolicyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyVC.swift; sourceTree = "<group>"; };
 		D2250EA82BB7671E008DAB56 /* HelpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpVC.swift; sourceTree = "<group>"; };
+		D23FF1152BC8F137000FA792 /* AnimationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationVC.swift; sourceTree = "<group>"; };
 		D24229892B97CC6A0081737E /* UIAlertController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController + Extension.swift"; sourceTree = "<group>"; };
 		D242298B2B97CC990081737E /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		D242298D2B97CCB50081737E /* String + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				72D9970D2B84839D004051E2 /* RealVisionVC.swift */,
 				D27CC8992B996B3400939C55 /* SignupVC.swift */,
 				726A95A52B9ACC170085492E /* SettingsVC.swift */,
+				D23FF1152BC8F137000FA792 /* AnimationVC.swift */,
 				D27CC8972B996ADB00939C55 /* ResetpasswordVC.swift */,
 				D2250EA82BB7671E008DAB56 /* HelpVC.swift */,
 				D2AA4E722B82E717007D6FFC /* Main.storyboard */,
@@ -344,6 +347,7 @@
 				D27CC89C2B996B5E00939C55 /* HomescreenVC.swift in Sources */,
 				959B2A412BB7AE7500325035 /* PrivacyPolicyVC.swift in Sources */,
 				D2250EA92BB7671E008DAB56 /* HelpVC.swift in Sources */,
+				D23FF1162BC8F137000FA792 /* AnimationVC.swift in Sources */,
 				D242298C2B97CC990081737E /* UIViewController + Extension.swift in Sources */,
 				D2AA4E6F2B82E717007D6FFC /* SceneDelegate.swift in Sources */,
 			);
