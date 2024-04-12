@@ -37,9 +37,11 @@ class SettingsVC: UIViewController {
     
     
     @IBAction func privacy(_ sender: UIButton) {
+       // self.performSegue(withIdentifier: "PrivacyView", sender: sender)
     }
     
     @IBAction func terms(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "TermsView", sender: sender)
     }
     
     

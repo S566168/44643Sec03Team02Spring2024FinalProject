@@ -51,7 +51,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="privacy:" destination="xea-RS-fZm" eventType="touchUpInside" id="8QR-8K-3eG"/>
-                                            <segue destination="Uo1-Ft-mfk" kind="show" id="UTM-wf-5XY"/>
+                                            <segue destination="Uo1-Ft-mfk" kind="show" identifier="PrivacyView" id="UTM-wf-5XY"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOd-sJ-7Qy">
@@ -90,6 +90,7 @@
                         <outlet property="shareBTN" destination="Qzf-NT-ekl" id="5Kz-HI-HCp"/>
                         <outlet property="termsBTN" destination="nOd-sJ-7Qy" id="RIt-kR-K2t"/>
                         <segue destination="s4c-8Z-kSH" kind="show" identifier="HelpView" id="5ND-CY-hHl"/>
+                        <segue destination="HaU-4W-dNl" kind="show" identifier="TermsView" id="jNY-P4-mI1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="He7-s9-CyW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -107,7 +108,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VJL-0j-f9L" userLabel="BigContainerSV">
                                 <rect key="frame" x="20" y="20" width="353" height="802"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XSY-k9-d3P">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSY-k9-d3P">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="802"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Privacy Policy of RealVision
@@ -314,6 +315,75 @@ iubenda hosts this content and only collects the Personal Data strictly necessar
                 <exit id="LtT-g9-ONg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1960" y="917"/>
+        </scene>
+        <!--TermsVC-->
+        <scene sceneID="ZpE-Ly-eOG">
+            <objects>
+                <viewController id="HaU-4W-dNl" customClass="TermsVC" customModule="RealVision" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gH9-be-PgI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tFC-jf-oVs" userLabel="BigContainerSV">
+                                <rect key="frame" x="20" y="20" width="353" height="802"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZL-MX-XJ4">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="802"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <mutableString key="text">Here are terms and conditions for an RealVision app:
+
+1. **User Agreement**:
+   By using the Object Detection app ("the App"), you agree to comply with and be bound by the following terms and conditions.
+
+2. **Accuracy of Information**:
+   The App provides object detection services based on image inputs. While we strive to ensure the accuracy and reliability of the detection results, we do not guarantee 100% accuracy. Users are advised to verify the results and use their discretion before making any decisions based on the detected objects.
+
+3. **Privacy Policy**:
+   Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use, and safeguard your information.
+
+4. **Prohibited Activities**:
+   Users are prohibited from using the App for any unlawful or unauthorized purpose, including but not limited to violating any applicable laws or regulations, infringing upon intellectual property rights, or transmitting harmful or objectionable content.
+
+5. **Limitation of Liability**:
+   In no event shall the App developers or its affiliates be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or goodwill, arising out of or related to your use of the App.
+
+6. **Intellectual Property**:
+   All content, including but not limited to text, graphics, logos, images, and software used in the App, is the property of the developers or its licensors and is protected by copyright and other intellectual property laws.
+
+7. **Updates and Changes**:
+   The developers reserve the right to modify, suspend, or discontinue any aspect of the App at any time without prior notice. We may also update these terms and conditions periodically, and it is your responsibility to review them regularly for any changes.
+
+8. **Indemnification**:
+   You agree to indemnify and hold harmless the developers, their affiliates, and their respective officers, directors, employees, and agents from and against any and all claims, liabilities, damages, losses, or expenses, including legal fees, arising out of or related to your use of the App or violation of these terms.
+
+9. **Governing Law**:
+   These terms and conditions shall be governed by and construed in accordance with the laws of [Your Jurisdiction], without regard to its conflict of law provisions.
+
+10. **Contact Information**:
+    If you have any questions or concerns about these terms and conditions, please contact us at [contact@email.com].
+
+Please note that these terms and conditions are for illustrative purposes only and may need to be customized to fit the specific features and requirements of your object detection app, as well as to comply with applicable laws and regulations in your jurisdiction. It is recommended to seek legal advice when drafting terms and conditions for your app.</mutableString>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Kn8-7n-KaB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Kn8-7n-KaB" firstAttribute="trailing" secondItem="tFC-jf-oVs" secondAttribute="trailing" constant="20" id="45y-O5-gtn"/>
+                            <constraint firstItem="tFC-jf-oVs" firstAttribute="top" secondItem="Kn8-7n-KaB" secondAttribute="top" constant="20" id="CoY-27-RsD"/>
+                            <constraint firstItem="tFC-jf-oVs" firstAttribute="leading" secondItem="Kn8-7n-KaB" secondAttribute="leading" constant="20" id="W5H-X9-RPV"/>
+                            <constraint firstItem="Kn8-7n-KaB" firstAttribute="bottom" secondItem="tFC-jf-oVs" secondAttribute="bottom" constant="20" id="bu3-SS-faW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jQw-7z-i2r"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J6j-cR-m3B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1517" y="1620"/>
         </scene>
         <!--HomescreenVC-->
         <scene sceneID="2RH-R7-XKD">
@@ -867,7 +937,6 @@ iubenda hosts this content and only collects the Personal Data strictly necessar
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="uCj-RX-MMk"/>
         <segue reference="kdk-5b-9if"/>
     </inferredMetricsTieBreakers>
     <resources>
