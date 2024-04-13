@@ -3,7 +3,9 @@ Team Members.
 1.Akhil Reddy Depa (S566168)
 2.Sushma Mundlamuri (S559298)
 3.UdayKiranReddy Devarapally (S567161)
+
 Sprint#06
+
 1.In the first Commit(Akhil Reddy Depa) Made some changes to UI
 
 2.In the first Commit(Sushma Mundlamuri) Modified all the required functionalities
