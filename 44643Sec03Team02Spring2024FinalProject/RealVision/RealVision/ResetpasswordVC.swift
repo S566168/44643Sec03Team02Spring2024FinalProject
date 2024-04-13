@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ResetpasswordVC: UIViewController {
     
@@ -19,38 +20,30 @@ class ResetpasswordVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
+        
 
         // Do any additional setup after loading the view.
-        resetBTN.isEnabled = false
-        emailIdTF.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        
 
     }
     
-    @objc func textFieldDidChange(_ textField: UITextField) {
-            if let email = emailIdTF.text, isValidEmail(email: email) {
-                resetBTN.isEnabled = true
-            } else {
-                resetBTN.isEnabled = false
-            }
-        }
-    func isValidEmail(email: String) -> Bool {
-            let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
-            let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailRegex)
-            return emailPredicate.evaluate(with: email)
-        }
-
     
-    @IBAction func email(_ sender: UITextField) {
-    }
+    
     
     @IBAction func reset(_ sender: UIButton) {
-        guard let email = emailIdTF.text else {
+        guard let email = emailIdTF.text, !email.isEmpty else {
+                    openAlert(title: "Alert", message: "Please enter email!", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{_ in }])
                     return
                 }
-                
-        showAlert(message: "Password reset link sent to \(email)"){
-            self.performSegue(withIdentifier: "LoginView", sender: sender)
-        }
+                Auth.auth().sendPasswordReset(withEmail: email) { [weak self] error in
+                    guard let self = self else { return }
+                    if let error = error {
+                        openAlert(title: "Alert", message: "Error sending reset email:", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{_ in }])
+                    } else {
+                        openAlert(title: "Alert", message: "Reset email sent successfully", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{_ in }])
+                        emailIdTF.text = ""
+                    }
+                }
 
     }
     @IBAction func Cancel(_ sender: UIButton) {

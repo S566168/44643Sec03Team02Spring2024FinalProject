@@ -671,9 +671,6 @@ Please note that these terms and conditions are for illustrative purposes only a
                                                 <rect key="frame" x="0.0" y="28.333333333333254" width="353" height="50.666666666666657"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="email:" destination="0ao-C1-FPz" eventType="editingDidEnd" id="xFV-aR-FLr"/>
-                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -723,7 +720,7 @@ Please note that these terms and conditions are for illustrative purposes only a
                     <navigationItem key="navigationItem" id="uow-RQ-T0J"/>
                     <connections>
                         <outlet property="cancelBTN" destination="Qd8-Hd-djy" id="3DI-6g-4pC"/>
-                        <outlet property="emailIdTF" destination="pNC-08-uLm" id="3n9-jP-fCe"/>
+                        <outlet property="emailIdTF" destination="pNC-08-uLm" id="jud-EK-gWg"/>
                         <outlet property="emailLBL" destination="RSL-49-d6Z" id="Vh6-wL-DEH"/>
                         <outlet property="resetBTN" destination="qrc-ka-Ppq" id="0Jj-yO-InT"/>
                         <outlet property="resetPasswordLBL" destination="KGV-Yi-MbA" id="3Y1-2b-2Dx"/>
