@@ -3,6 +3,27 @@ Team Members.
 1.Akhil Reddy Depa (S566168)
 2.Sushma Mundlamuri (S559298)
 3.UdayKiranReddy Devarapally (S567161)
+Sprint#06
+1.In the first Commit(Akhil Reddy Depa) Made some changes to UI
+
+2.In the first Commit(Sushma Mundlamuri) Modified all the required functionalities
+
+3.In the first Commit(UdayKiranReddy Devarapally) Added screen for terms and make changes in text field.
+
+4.In the second Commit(Akhil Reddy Depa) Added screen for live camera and given access for camera. 
+
+5.In the second Commit(Sushma Mundlamuri) Created a live class and added some logic.
+
+6.In the second Commit(UdayKiranReddy Devarapally) Added some functionality in LiveVC
+
+7.In the third Commit(Akhil Reddy Depa) Added firebase integration for SignupVC
+
+8.In the third Commit(Sushma Mundlamuri) added firebase to the reserpasswordVC
+
+9.In the third Commit(UdayKiranReddy Devarapally) Added logic to firebase for RealvisionVC
+
+![Screenshot (384)](https://github.com/Akhil2402/44643Sec03Team02Spring2024FinalProject/assets/143120291/fd317b6a-836f-43e4-9cf5-ff06b928d13d)
+
 
 Spirnt#05
 
