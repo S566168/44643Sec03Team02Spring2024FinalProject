@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SignupVC: UIViewController {
     
@@ -21,59 +22,51 @@ class SignupVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
-        
-        // Do any additional setup after loading the view.
-    }
 
+    }
+    
     @IBAction func login(_ sender: UIButton) {
         self.performSegue(withIdentifier: "LoginView", sender: sender)
     }
     
     @IBAction func createAccount(_ sender: UIButton) {
-        if let email = emailTF.text, let password = passwordTF.text, let username = usernameTF.text, let conPassword = confirmPwdTF.text{
-                                if username == ""{
-                                    openAlert(title: "Alert", message: "Please enter username", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in }])
-                                    print("Please enter username")
-                                }else if !email.validateEmailId(){
-                                    openAlert(title: "Alert", message: "Please enter valid email", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in }])
-                                    print("email is not valid")
-                                }else if !password.validatePassword(){
-                                    openAlert(title: "Alert", message: "Please enter valid Password", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in }])
-                                    print("Password is not valid")
-                                } else{
-                                    if conPassword == ""{
-                                        openAlert(title: "Alert", message: "Please enter valid Password", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in }])
-                                        print("Please confirm password")
-                                    }else{
-                                        if password == conPassword{
-                                            openAlert(title: "Alert", message: "Account created", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in }])
-                                            usernameTF.text = ""
-                                            emailTF.text = ""
-                                            passwordTF.text = ""
-                                            confirmPwdTF.text = ""
-                                        }else{
-                                            openAlert(title: "Alert", message: "password doesn't match", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in }])
-                                            print("password does not match")
-                                        }
-                                    }
-                                }
-                            }else{
-                                openAlert(title: "Alert", message: "please validate your details", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in }])
-                                print("Please check your details")
-                            }
+        guard let email = emailTF.text, !email.isEmpty else {
+            openAlert(title: "Alert", message: "Please enter email!", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in }])
+            return
+        }
+        
+        guard let password = passwordTF.text, !password.isEmpty else {
+            openAlert(title: "Alert", message: "Please enter password!", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in }])
+            return
+        }
+        
+        guard let username = usernameTF.text, !username.isEmpty else{
+            openAlert(title: "Alert", message: "Please enter username!", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in }])
+            return
+        }
+        
+        guard let conPassword = confirmPwdTF.text, !conPassword.isEmpty else {
+            openAlert(title: "Alert", message: "Please enter password in both fields!", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in }])
+            return
+        }
+        
+        guard password == conPassword else {
+            openAlert(title: "Alert", message: "Passwords do not match!", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in }])
+            return
+        }
+        
+        Auth.auth().createUser(withEmail: email, password: password) { [weak self] authResult, error in
+            guard let self = self else { return }
+            if let error = error {
+                let errorMessage = "Error creating user: \(error.localizedDescription)"
+                openAlert(title: "Alert", message: "\(errorMessage)", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in }])
+            } else {
+                let successMessage = "User created successfully"
+                openAlert(title: "Alert", message: "\(successMessage)", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in }])
+                self.performSegue(withIdentifier: "LoginView", sender: self)
+            }
+        }
     }
     
     
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

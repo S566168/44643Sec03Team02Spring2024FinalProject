@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyDF9WOPrrAnqaDqju6NhIdNu91PvxU9V7c</string>
+	<string>AIzaSyCNvXPSqpg8ghAx1gFw0VbaLQLLYI4Zc-0</string>
 	<key>GCM_SENDER_ID</key>
-	<string>804815228911</string>
+	<string>441717903708</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>edu.nwmissouri.spring24.cs44643.sec03.RealVision</string>
 	<key>PROJECT_ID</key>
-	<string>realvision-b32e4</string>
+	<string>ios-project-fcf96</string>
 	<key>STORAGE_BUCKET</key>
-	<string>realvision-b32e4.appspot.com</string>
+	<string>ios-project-fcf96.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:804815228911:ios:f809ff3b8d95af5745301a</string>
+	<string>1:441717903708:ios:11d58affbac459449ef199</string>
 </dict>
 </plist>
