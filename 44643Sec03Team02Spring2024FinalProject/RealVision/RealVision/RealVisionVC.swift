@@ -7,6 +7,7 @@
 
 import UIKit
 import Lottie
+import FirebaseAuth
 
 
 class RealVisionVC: UIViewController {
@@ -49,29 +50,26 @@ class RealVisionVC: UIViewController {
     }
     
     @IBAction func loginBTN(_ sender: UIButton) {
-        if let email = userNameTF.text , let password = passwordTF.text {
-            if !email.validateEmailId(){
-                openAlert(title: "Alert", message: "Email address not found", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{ _ in
-                    print("Clicked")
+        guard let email = userNameTF.text, !email.isEmpty else {
+                    openAlert(title: "Alert", message: "Email address not found", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{ _ in}])
+                    return
+                }
+                
+                guard let password = passwordTF.text, !password.isEmpty else {
+                        openAlert(title: "Alert", message: "please enter valid password", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{ _ in}])
+                    return
+                }
+                
+                Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+                    guard let self = self else { return }
+                    if let error = error {
+                        openAlert(title: "Alert", message: "Invalid Login Credentials! Please try again.", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{ _ in}])
+                    } else {
+                        self.performSegue(withIdentifier: "HomescreenView", sender: sender)
+                    }
                     
-                }])
-                
-            }else if !password.validatePassword(){
-                openAlert(title: "Alert", message: "please enter valid password", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{ _ in
-                    print("Clicked")
-                    
-                }])
-            }else{
-                
-            }
-        }else {
-            openAlert(title: "Alert", message: "please add detail ", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{ _ in
-                print("Clicked")
-                
-            }])
-        }
-        
-        self.performSegue(withIdentifier: "HomescreenView", sender: sender)
+                }
+
     }
     
     
