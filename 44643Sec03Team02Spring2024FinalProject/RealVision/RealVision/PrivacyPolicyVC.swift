@@ -20,10 +20,10 @@ applyGradientBackground()
         let _: CAGradientLayerType = .axial
         let _: AnimatedGradientViewDirection = .up
         let animatedGradient = AnimatedGradientView(frame: self.view.bounds)
-        animatedGradient.animationValues = [(colors: ["#2BC0E4", "#EAECC6"], .up, .axial),
-                                            (colors: ["#833ab4", "#fd1d1d", "#fcb045"], .right, .axial),
-                                            (colors: ["#003973", "#E5E5BE"], .down, .axial),
-                                            (colors: ["#1E9600", "#FFF200", "#FF0000"], .left, .axial)]
+        animatedGradient.animationValues = [(colors: ["#E6E6FA", "#D8BFD8", "#DDA0DD", "#E6E6FA"], .up, .axial),
+                                            (colors: ["#FFB6C1", "#FFA07A", "#FFDAB9", "#FFB6C1"], .right, .axial),
+                                            (colors: ["#AFEEEE", "#F5FFFA", "#B0E0E6", "#AFEEEE"], .down, .axial),
+                                            (colors: ["#FDD017", "#FFD700", "#FFEC8B", "#FDD017"], .left, .axial)]
         view.addSubview(animatedGradient)
         view.sendSubviewToBack(animatedGradient)
     }
