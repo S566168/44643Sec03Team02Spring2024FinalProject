@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AnimatedGradientView
 
 class SettingsVC: UIViewController {
     
@@ -17,11 +18,22 @@ class SettingsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        applyGradientBackground()
 
         // Do any additional setup after loading the view.
     }
     
-
+    private func applyGradientBackground(){
+        let _: CAGradientLayerType = .axial
+        let _: AnimatedGradientViewDirection = .up
+        let animatedGradient = AnimatedGradientView(frame: self.view.bounds)
+        animatedGradient.animationValues = [(colors: ["#2BC0E4", "#EAECC6"], .up, .axial),
+                                            (colors: ["#833ab4", "#fd1d1d", "#fcb045"], .right, .axial),
+                                            (colors: ["#003973", "#E5E5BE"], .down, .axial),
+                                            (colors: ["#1E9600", "#FFF200", "#FF0000"], .left, .axial)]
+        view.addSubview(animatedGradient)
+        view.sendSubviewToBack(animatedGradient)
+    }
     
     @IBAction func share(_ sender: UIButton) {
         let activity = UIActivityViewController(activityItems: ["/Users/akhilreddy/Documents/44643Sec03Team02Spring2024FinalProject/44643Sec03Team02Spring2024FinalProject/44643Sec03Team02Spring2024FinalProject/RealVision"], applicationActivities: nil)
@@ -37,13 +49,16 @@ class SettingsVC: UIViewController {
     
     
     @IBAction func privacy(_ sender: UIButton) {
-       // self.performSegue(withIdentifier: "PrivacyView", sender: sender)
+        self.performSegue(withIdentifier: "PrivacyView", sender: sender)
     }
     
     @IBAction func terms(_ sender: UIButton) {
         self.performSegue(withIdentifier: "TermsView", sender: sender)
     }
     
+    @IBAction func CancelBTN(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "Cancel", sender: sender)
+    }
     
     
     

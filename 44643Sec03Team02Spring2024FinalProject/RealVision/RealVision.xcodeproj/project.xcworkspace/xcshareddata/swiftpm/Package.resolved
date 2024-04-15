@@ -1,4 +1,5 @@
 {
+  "originHash" : "3c171c861c3fb57608184f6056d158459237a298929a35baf31440c632d10c82",
   "pins" : [
     {
       "identity" : "abseil-cpp-binary",
@@ -7,6 +8,15 @@
       "state" : {
         "revision" : "7ce7be095bc3ed3c98b009532fe2d7698c132614",
         "version" : "1.2024011601.0"
+      }
+    },
+    {
+      "identity" : "animatedgradientview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/rwbutler/AnimatedGradientView.git",
+      "state" : {
+        "revision" : "c82c3c0e311a7164f0bee4bd52ca525c5b6da4f6",
+        "version" : "3.1.1"
       }
     },
     {
@@ -127,5 +137,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

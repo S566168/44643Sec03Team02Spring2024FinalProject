@@ -31,6 +31,7 @@
 		D27CC8982B996ADB00939C55 /* ResetpasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27CC8972B996ADB00939C55 /* ResetpasswordVC.swift */; };
 		D27CC89A2B996B3400939C55 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27CC8992B996B3400939C55 /* SignupVC.swift */; };
 		D27CC89C2B996B5E00939C55 /* HomescreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27CC89B2B996B5E00939C55 /* HomescreenVC.swift */; };
+		D2935B112BCD01E5002637C1 /* AnimatedGradientView in Frameworks */ = {isa = PBXBuildFile; productRef = D2935B102BCD01E5002637C1 /* AnimatedGradientView */; };
 		D2AA4E6D2B82E717007D6FFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA4E6C2B82E717007D6FFC /* AppDelegate.swift */; };
 		D2AA4E6F2B82E717007D6FFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA4E6E2B82E717007D6FFC /* SceneDelegate.swift */; };
 		D2AA4E712B82E717007D6FFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA4E702B82E717007D6FFC /* ViewController.swift */; };
@@ -95,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2935B112BCD01E5002637C1 /* AnimatedGradientView in Frameworks */,
 				954489712BB383140050F01B /* FirebaseDatabaseSwift in Frameworks */,
 				9544896F2BB383140050F01B /* FirebaseDatabase in Frameworks */,
 				9544896D2BB383140050F01B /* FirebaseAnalytics in Frameworks */,
@@ -224,6 +226,7 @@
 				954489762BB383140050F01B /* FirebaseFirestoreSwift */,
 				954489782BB383140050F01B /* FirebaseStorage */,
 				9544897E2BB4CB840050F01B /* FirebaseAuth */,
+				D2935B102BCD01E5002637C1 /* AnimatedGradientView */,
 			);
 			productName = RealVision;
 			productReference = D2AA4E692B82E717007D6FFC /* RealVision.app */;
@@ -300,6 +303,7 @@
 			packageReferences = (
 				72D9970F2B84856E004051E2 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				9544896B2BB383140050F01B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				D2935B0F2BCD01E5002637C1 /* XCRemoteSwiftPackageReference "AnimatedGradientView" */,
 			);
 			productRefGroup = D2AA4E6A2B82E717007D6FFC /* Products */;
 			projectDirPath = "";
@@ -724,6 +728,14 @@
 				minimumVersion = 10.23.0;
 			};
 		};
+		D2935B0F2BCD01E5002637C1 /* XCRemoteSwiftPackageReference "AnimatedGradientView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rwbutler/AnimatedGradientView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -771,6 +783,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9544896B2BB383140050F01B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		D2935B102BCD01E5002637C1 /* AnimatedGradientView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D2935B0F2BCD01E5002637C1 /* XCRemoteSwiftPackageReference "AnimatedGradientView" */;
+			productName = AnimatedGradientView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

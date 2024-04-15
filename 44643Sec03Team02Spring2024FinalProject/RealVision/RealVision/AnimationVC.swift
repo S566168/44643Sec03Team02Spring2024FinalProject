@@ -7,6 +7,7 @@
 
 import UIKit
 import Lottie
+import AnimatedGradientView
 
 class AnimationVC: UIViewController {
 
@@ -26,10 +27,22 @@ class AnimationVC: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        applyGradientBackground()
 
         // Do any additional setup after loading the view.
     }
     
+    private func applyGradientBackground(){
+        let _: CAGradientLayerType = .axial
+        let _: AnimatedGradientViewDirection = .up
+        let animatedGradient = AnimatedGradientView(frame: self.view.bounds)
+        animatedGradient.animationValues = [(colors: ["#2BC0E4", "#EAECC6"], .up, .axial),
+                                            (colors: ["#833ab4", "#fd1d1d", "#fcb045"], .right, .axial),
+                                            (colors: ["#003973", "#E5E5BE"], .down, .axial),
+                                            (colors: ["#1E9600", "#FFF200", "#FF0000"], .left, .axial)]
+        view.addSubview(animatedGradient)
+        view.sendSubviewToBack(animatedGradient)
+    }
 
     /*
     // MARK: - Navigation

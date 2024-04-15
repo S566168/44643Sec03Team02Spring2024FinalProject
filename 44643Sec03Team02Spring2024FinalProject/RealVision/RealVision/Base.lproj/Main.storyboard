@@ -9,107 +9,140 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="iQV-pP-sf4">
+            <objects>
+                <navigationController id="ATJ-LS-fjk" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="sZV-vI-TA7"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tO1-EC-tdH">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xea-RS-fZm" kind="relationship" relationship="rootViewController" id="iCW-r6-eCf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="van-lE-Otz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="825" y="917"/>
+        </scene>
         <!--SettingsVC -->
         <scene sceneID="YcF-hk-RuA">
             <objects>
-                <viewController title="SettingsVC " id="xea-RS-fZm" customClass="SettingsVC" customModule="RealVision" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="SettingsVC " modalPresentationStyle="overFullScreen" id="xea-RS-fZm" customClass="SettingsVC" customModule="RealVision" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vWw-hj-rWK">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pPG-01-Tyj" userLabel="ButtonsSV">
-                                <rect key="frame" x="100" y="313.66666666666669" width="193" height="214.66666666666669"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Fgi-nz-Mqb" userLabel="BigContainerSV">
+                                <rect key="frame" x="5" y="108" width="383" height="705"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qzf-NT-ekl">
-                                        <rect key="frame" x="0.0" y="0.0" width="150.66666666666666" height="47.666666666666664"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="Share" title="    Share">
-                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
-                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TpZ-8z-hte">
+                                        <rect key="frame" x="0.0" y="0.0" width="383" height="229.66666666666666"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pPG-01-Tyj" userLabel="ButtonsSV">
+                                        <rect key="frame" x="0.0" y="237.66666666666669" width="383" height="229.66666666666669"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qzf-NT-ekl">
+                                                <rect key="frame" x="116.33333333333333" y="0.0" width="150.66666666666669" height="51.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="Share" title="    Share">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="share:" destination="xea-RS-fZm" eventType="touchUpInside" id="dFA-Dq-tYS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iev-aZ-PfZ">
+                                                <rect key="frame" x="123.00000000000001" y="59.333333333333314" width="137.33333333333337" height="51.666666666666657"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="helpbutton" title="    Help">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="help:" destination="xea-RS-fZm" eventType="touchUpInside" id="vXb-RV-pcS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afu-Hb-hzH">
+                                                <rect key="frame" x="107" y="118.99999999999999" width="169" height="51.333333333333329"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="privacy" title="    Privacy">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="privacy:" destination="xea-RS-fZm" eventType="touchUpInside" id="8QR-8K-3eG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOd-sJ-7Qy">
+                                                <rect key="frame" x="114.66666666666667" y="178.33333333333331" width="153.66666666666663" height="51.333333333333343"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="Terms" title="    Terms">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="terms:" destination="xea-RS-fZm" eventType="touchUpInside" id="jBd-7s-C2L"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ON8-qN-b2m">
+                                        <rect key="frame" x="0.0" y="475.33333333333343" width="383" height="229.66666666666669"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Cancel"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Cancel" titleAlignment="center"/>
                                         <connections>
-                                            <action selector="share:" destination="xea-RS-fZm" eventType="touchUpInside" id="dFA-Dq-tYS"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iev-aZ-PfZ">
-                                        <rect key="frame" x="0.0" y="55.666666666666629" width="137.33333333333334" height="47.666666666666657"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="helpbutton" title="    Help">
-                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
-                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="help:" destination="xea-RS-fZm" eventType="touchUpInside" id="vXb-RV-pcS"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afu-Hb-hzH">
-                                        <rect key="frame" x="0.0" y="111.33333333333333" width="169" height="47.666666666666671"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="privacy" title="    Privacy">
-                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
-                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="privacy:" destination="xea-RS-fZm" eventType="touchUpInside" id="8QR-8K-3eG"/>
-                                            <segue destination="Uo1-Ft-mfk" kind="show" identifier="PrivacyView" id="UTM-wf-5XY"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOd-sJ-7Qy">
-                                        <rect key="frame" x="0.0" y="167" width="153.66666666666666" height="47.666666666666657"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="Terms" title="    Terms">
-                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
-                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="terms:" destination="xea-RS-fZm" eventType="touchUpInside" id="jBd-7s-C2L"/>
+                                            <action selector="CancelBTN:" destination="xea-RS-fZm" eventType="touchUpInside" id="Jb7-zZ-6uJ"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TpZ-8z-hte">
-                                <rect key="frame" x="127" y="105" width="121" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5r6-iX-JNM"/>
-                        <color key="backgroundColor" red="0.90588235289999997" green="1" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="5r6-iX-JNM" firstAttribute="trailing" secondItem="pPG-01-Tyj" secondAttribute="trailing" constant="100" id="7ky-Kv-QyT"/>
-                            <constraint firstItem="pPG-01-Tyj" firstAttribute="centerX" secondItem="5r6-iX-JNM" secondAttribute="centerX" id="gJi-eo-vsM"/>
-                            <constraint firstItem="pPG-01-Tyj" firstAttribute="centerY" secondItem="5r6-iX-JNM" secondAttribute="centerY" id="m4D-LI-Uq5"/>
+                            <constraint firstItem="5r6-iX-JNM" firstAttribute="trailing" secondItem="Fgi-nz-Mqb" secondAttribute="trailing" constant="5" id="1ov-df-Uvp"/>
+                            <constraint firstItem="Fgi-nz-Mqb" firstAttribute="leading" secondItem="5r6-iX-JNM" secondAttribute="leading" constant="5" id="3L1-YT-pwN"/>
+                            <constraint firstItem="Fgi-nz-Mqb" firstAttribute="top" secondItem="5r6-iX-JNM" secondAttribute="top" constant="5" id="TvW-GO-8AT"/>
+                            <constraint firstItem="5r6-iX-JNM" firstAttribute="bottom" secondItem="Fgi-nz-Mqb" secondAttribute="bottom" constant="5" id="dOP-Bd-QIG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0Ei-DA-LtW"/>
+                    <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="helpBTN" destination="iev-aZ-PfZ" id="4uH-l1-2XK"/>
                         <outlet property="privacyBTN" destination="afu-Hb-hzH" id="2h3-vp-5Z1"/>
                         <outlet property="shareBTN" destination="Qzf-NT-ekl" id="5Kz-HI-HCp"/>
                         <outlet property="termsBTN" destination="nOd-sJ-7Qy" id="RIt-kR-K2t"/>
-                        <segue destination="s4c-8Z-kSH" kind="show" identifier="HelpView" id="5ND-CY-hHl"/>
-                        <segue destination="HaU-4W-dNl" kind="show" identifier="TermsView" id="jNY-P4-mI1"/>
+                        <segue destination="s4c-8Z-kSH" kind="show" identifier="HelpView" id="6TN-9v-bz7"/>
+                        <segue destination="Uo1-Ft-mfk" kind="show" identifier="PrivacyView" id="8t2-Vx-gIR"/>
+                        <segue destination="HaU-4W-dNl" kind="show" identifier="TermsView" id="ISd-ug-0LY"/>
+                        <segue destination="sC7-tU-LxE" kind="showDetail" identifier="Cancel" id="OGw-KD-kXC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="He7-s9-CyW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="932" y="917"/>
+            <point key="canvasLocation" x="1584" y="917"/>
         </scene>
         <!--Privacy PolicyVC-->
         <scene sceneID="xbv-AG-8tV">
             <objects>
-                <viewController id="Uo1-Ft-mfk" customClass="PrivacyPolicyVC" customModule="RealVision" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overFullScreen" id="Uo1-Ft-mfk" customClass="PrivacyPolicyVC" customModule="RealVision" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sfx-Pg-6vk">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VJL-0j-f9L" userLabel="BigContainerSV">
-                                <rect key="frame" x="20" y="20" width="353" height="802"/>
+                                <rect key="frame" x="20" y="20" width="353" height="778"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSY-k9-d3P">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="802"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="778"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Privacy Policy of RealVision
 This Application collects some Personal Data from its Users.
@@ -234,7 +267,7 @@ iubenda hosts this content and only collects the Personal Data strictly necessar
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="g0E-Pj-MwI"/>
-                        <color key="backgroundColor" red="0.90588235294117647" green="1" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="g0E-Pj-MwI" firstAttribute="bottom" secondItem="VJL-0j-f9L" secondAttribute="bottom" constant="20" id="4gJ-SB-4BI"/>
                             <constraint firstItem="VJL-0j-f9L" firstAttribute="top" secondItem="sfx-Pg-6vk" secondAttribute="top" constant="20" id="ben-Zz-RkX"/>
@@ -243,28 +276,20 @@ iubenda hosts this content and only collects the Personal Data strictly necessar
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IZW-xe-Ykp"/>
+                    <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fe1-55-XA6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2937" y="917"/>
+            <point key="canvasLocation" x="1585" y="1668"/>
         </scene>
-        <!--HelpVC-->
+        <!--Settings-->
         <scene sceneID="ie8-FH-wCF">
             <objects>
-                <viewController id="s4c-8Z-kSH" customClass="HelpVC" customModule="RealVision" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overFullScreen" id="s4c-8Z-kSH" customClass="HelpVC" customModule="RealVision" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rOf-0D-Xag">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yh4-4Y-Zrl">
-                                <rect key="frame" x="20" y="250" width="353" height="292"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="Message:" destination="LtT-g9-ONg" eventType="editingDidEnd" id="KNo-Cg-c9B"/>
-                                </connections>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact us" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glV-6l-Gd5">
                                 <rect key="frame" x="119" y="196" width="159" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -272,13 +297,15 @@ iubenda hosts this content and only collects the Personal Data strictly necessar
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How can we help you?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qrz-rX-e4o">
-                                <rect key="frame" x="114" y="256" width="170" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Help us to improve!!" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yh4-4Y-Zrl">
+                                <rect key="frame" x="20" y="353" width="353" height="165"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="Message:" destination="LtT-g9-ONg" eventType="editingDidEnd" id="KNo-Cg-c9B"/>
+                                </connections>
+                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="  📨" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CR4-cx-a0e">
                                 <rect key="frame" x="153" y="146" width="53" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -297,7 +324,7 @@ iubenda hosts this content and only collects the Personal Data strictly necessar
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="llI-tU-zlU"/>
-                        <color key="backgroundColor" red="0.90588235294117647" green="1" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="yh4-4Y-Zrl" firstAttribute="leading" secondItem="llI-tU-zlU" secondAttribute="leading" constant="20" id="Q1a-BB-Hum"/>
                             <constraint firstItem="yh4-4Y-Zrl" firstAttribute="top" secondItem="llI-tU-zlU" secondAttribute="top" constant="250" id="R8G-De-RSg"/>
@@ -305,7 +332,10 @@ iubenda hosts this content and only collects the Personal Data strictly necessar
                             <constraint firstItem="llI-tU-zlU" firstAttribute="bottom" secondItem="yh4-4Y-Zrl" secondAttribute="bottom" constant="300" id="wc1-d6-Yez"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="eGj-UA-8kX"/>
+                    <navigationItem key="navigationItem" title="Settings" id="eGj-UA-8kX">
+                        <barButtonItem key="backBarButtonItem" title="Settings" id="TyP-rc-Naz"/>
+                    </navigationItem>
+                    <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="Message" destination="yh4-4Y-Zrl" id="BY6-ec-N9d"/>
                         <outlet property="sendBTN" destination="r4c-gp-4hz" id="qUR-2x-kKl"/>
@@ -314,22 +344,22 @@ iubenda hosts this content and only collects the Personal Data strictly necessar
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KJB-5k-mpf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="LtT-g9-ONg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1960" y="917"/>
+            <point key="canvasLocation" x="2427" y="917"/>
         </scene>
         <!--TermsVC-->
         <scene sceneID="ZpE-Ly-eOG">
             <objects>
-                <viewController id="HaU-4W-dNl" customClass="TermsVC" customModule="RealVision" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overFullScreen" id="HaU-4W-dNl" customClass="TermsVC" customModule="RealVision" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gH9-be-PgI">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tFC-jf-oVs" userLabel="BigContainerSV">
-                                <rect key="frame" x="20" y="20" width="353" height="802"/>
+                                <rect key="frame" x="20" y="123" width="353" height="675"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZL-MX-XJ4">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="802"/>
-                                        <color key="backgroundColor" red="0.90588235289999997" green="1" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="675"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Here are terms and conditions for an RealVision app:
 
 1. **User Agreement**:
@@ -371,7 +401,7 @@ Please note that these terms and conditions are for illustrative purposes only a
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Kn8-7n-KaB"/>
-                        <color key="backgroundColor" red="0.90588235289999997" green="1" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Kn8-7n-KaB" firstAttribute="trailing" secondItem="tFC-jf-oVs" secondAttribute="trailing" constant="20" id="45y-O5-gtn"/>
                             <constraint firstItem="tFC-jf-oVs" firstAttribute="top" secondItem="Kn8-7n-KaB" secondAttribute="top" constant="20" id="CoY-27-RsD"/>
@@ -380,10 +410,11 @@ Please note that these terms and conditions are for illustrative purposes only a
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jQw-7z-i2r"/>
+                    <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J6j-cR-m3B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1517" y="1620"/>
+            <point key="canvasLocation" x="408" y="1668"/>
         </scene>
         <!--HomescreenVC-->
         <scene sceneID="2RH-R7-XKD">
@@ -400,7 +431,7 @@ Please note that these terms and conditions are for illustrative purposes only a
                                         <rect key="frame" x="0.0" y="0.0" width="333" height="237.66666666666666"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
-                                            <backgroundConfiguration key="background" image="RealVision"/>
+                                            <backgroundConfiguration key="background" image="RealvisionLogo"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="LogoBTN:" destination="sC7-tU-LxE" eventType="touchUpInside" id="nmP-ZG-Kcs"/>
@@ -450,7 +481,7 @@ Please note that these terms and conditions are for illustrative purposes only a
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PD3-YW-Teo"/>
-                        <color key="backgroundColor" red="0.90526587160000005" green="1" blue="0.67428029249999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="NZw-Jt-B86" firstAttribute="top" secondItem="PD3-YW-Teo" secondAttribute="top" constant="30" id="2t4-V9-W7B"/>
                             <constraint firstItem="PD3-YW-Teo" firstAttribute="trailing" secondItem="NZw-Jt-B86" secondAttribute="trailing" constant="30" id="MNI-jB-2W7"/>
@@ -466,7 +497,7 @@ Please note that these terms and conditions are for illustrative purposes only a
                         <outlet property="photosBTN" destination="3u8-uf-S1d" id="Dzx-kl-daQ"/>
                         <outlet property="settingsBTN" destination="4Do-O8-mHI" id="l9A-xP-9qW"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="LoginView" id="aD0-kK-HmT"/>
-                        <segue destination="xea-RS-fZm" kind="show" identifier="SettingsView" id="LUI-oN-4Ji"/>
+                        <segue destination="ATJ-LS-fjk" kind="show" identifier="SettingsView" id="lt1-mm-w3h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6OL-tp-uti" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -484,7 +515,7 @@ Please note that these terms and conditions are for illustrative purposes only a
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6yq-4B-z0H" userLabel="BigcontainerSV">
                                 <rect key="frame" x="10" y="10" width="373" height="832"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RealVision" translatesAutoresizingMaskIntoConstraints="NO" id="HFy-Dd-U0U" userLabel="RealVision">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RealvisionLogo" translatesAutoresizingMaskIntoConstraints="NO" id="HFy-Dd-U0U" userLabel="RealVision">
                                         <rect key="frame" x="0.0" y="0.0" width="373" height="249.66666666666666"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQM-Pm-Pb6">
@@ -579,7 +610,7 @@ Please note that these terms and conditions are for illustrative purposes only a
                                         </constraints>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.90526587162467642" green="1" blue="0.67428029251205013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="87P-GA-Ep6" firstAttribute="width" secondItem="6yq-4B-z0H" secondAttribute="width" id="5mX-hC-Rez"/>
                                     <constraint firstItem="HFy-Dd-U0U" firstAttribute="height" secondItem="6yq-4B-z0H" secondAttribute="height" multiplier="0.3" id="LkW-sx-6QQ"/>
@@ -591,23 +622,15 @@ Please note that these terms and conditions are for illustrative purposes only a
                                     <constraint firstItem="CQM-Pm-Pb6" firstAttribute="height" secondItem="Nv3-aZ-i5a" secondAttribute="height" id="oYn-hv-I9G"/>
                                 </constraints>
                             </stackView>
-                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vef-k1-bw4" userLabel="LaunchLAV" customClass="LottieAnimationView" customModule="Lottie">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.90526587160000005" green="1" blue="0.67428029249999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6yq-4B-z0H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="8ND-2M-gXg"/>
-                            <constraint firstAttribute="bottom" secondItem="vef-k1-bw4" secondAttribute="bottom" id="MO7-hb-dl6"/>
-                            <constraint firstItem="vef-k1-bw4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VRU-Il-SWX"/>
                             <constraint firstAttribute="trailing" secondItem="6yq-4B-z0H" secondAttribute="trailing" constant="10" id="Wll-dP-EaR"/>
-                            <constraint firstItem="vef-k1-bw4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aAa-Nr-fQf"/>
                             <constraint firstItem="6yq-4B-z0H" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aoy-5b-P3E"/>
                             <constraint firstAttribute="bottom" secondItem="6yq-4B-z0H" secondAttribute="bottom" constant="10" id="dG9-JV-9wa"/>
                             <constraint firstItem="6yq-4B-z0H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="o4l-fn-teH"/>
-                            <constraint firstAttribute="trailing" secondItem="vef-k1-bw4" secondAttribute="trailing" id="rM8-RV-Wiz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WXG-ZI-idJ"/>
@@ -637,7 +660,7 @@ Please note that these terms and conditions are for illustrative purposes only a
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Re9-Ua-J8K" userLabel="BigContainerSV">
                                 <rect key="frame" x="20" y="40" width="353" height="792"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RealVision" translatesAutoresizingMaskIntoConstraints="NO" id="INC-Iw-uzO" userLabel="RealVision">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RealvisionLogo" translatesAutoresizingMaskIntoConstraints="NO" id="INC-Iw-uzO" userLabel="RealVision">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="237.66666666666666"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUS-Me-gVA">
@@ -709,7 +732,7 @@ Please note that these terms and conditions are for illustrative purposes only a
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PuV-kp-hF7"/>
-                        <color key="backgroundColor" red="0.90526587160000005" green="1" blue="0.67428029249999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="PuV-kp-hF7" firstAttribute="trailing" secondItem="Re9-Ua-J8K" secondAttribute="trailing" constant="20" id="XQd-6V-8P2"/>
                             <constraint firstItem="PuV-kp-hF7" firstAttribute="bottom" secondItem="Re9-Ua-J8K" secondAttribute="bottom" constant="20" id="mVU-Bg-Z5n"/>
@@ -879,7 +902,7 @@ Please note that these terms and conditions are for illustrative purposes only a
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oSQ-EW-X1Z"/>
-                        <color key="backgroundColor" red="0.90526587160000005" green="1" blue="0.67428029249999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="oSQ-EW-X1Z" firstAttribute="bottom" secondItem="pJA-uo-rLe" secondAttribute="bottom" constant="40" id="Lab-sW-olP"/>
                             <constraint firstItem="pJA-uo-rLe" firstAttribute="top" secondItem="oSQ-EW-X1Z" secondAttribute="top" constant="40" id="m7o-uK-0hR"/>
@@ -991,11 +1014,12 @@ Please note that these terms and conditions are for illustrative purposes only a
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gnt-xj-KLj"/>
+        <segue reference="aD0-kK-HmT"/>
+        <segue reference="OGw-KD-kXC"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Img" width="72" height="71"/>
-        <image name="RealVision" width="1240" height="1280"/>
+        <image name="RealvisionLogo" width="492" height="508"/>
         <image name="Share" width="32" height="32"/>
         <image name="Terms" width="32" height="32"/>
         <image name="helpbutton" width="32" height="32"/>
