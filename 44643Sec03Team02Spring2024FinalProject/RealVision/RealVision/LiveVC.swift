@@ -10,6 +10,9 @@ import AVKit
 import Vision
 
 class LiveVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+    
+    var selectedModel = Resnet50().model
+    
     override var prefersStatusBarHidden:Bool{
         return true
     }

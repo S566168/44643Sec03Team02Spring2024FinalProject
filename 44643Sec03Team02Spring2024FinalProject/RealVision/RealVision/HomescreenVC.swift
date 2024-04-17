@@ -7,21 +7,49 @@
 
 import UIKit
 import AnimatedGradientView
+import CoreML
+
+enum Model: String {
+    case Resnet50
+    case MobileNetV2
+    case SqueezeNet
+    case Person
+}
+
+let models: [Model] = [.Resnet50, .MobileNetV2, .SqueezeNet, .Person]
 
 class HomescreenVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    
+    var selectedModel:Model = .Resnet50
     
     @IBOutlet weak var logoBTN: UIButton!
     @IBOutlet weak var settingsBTN: UIButton!
     @IBOutlet weak var photosBTN: UIButton!
     @IBOutlet weak var liveBTN: UIButton!
-
     @IBOutlet weak var imageView: UIImageView!
     let imagePicker = UIImagePickerController()
+    let globalPicker = GlobalPickerView()
     override func viewDidLoad() {
         super.viewDidLoad()
         applyGradientBackground()
 
     }
+    
+    @IBAction func pickerBTN(_ sender: UIButton) {
+    
+    self.globalPicker.stringArray =  models.map { $0.rawValue }
+    
+    self.globalPicker.modalPresentationStyle = .overCurrentContext
+    self.globalPicker.onDone = { [weak self] index in
+            guard let self = self else { return }
+            if let selectedModel = Model(rawValue: models[index].rawValue) {
+                self.selectedModel = selectedModel
+            }
+       }
+    
+    self.present(self.globalPicker, animated: true, completion: nil)
+}
+    
     
     private func applyGradientBackground(){
         let _: CAGradientLayerType = .axial
@@ -64,6 +92,23 @@ class HomescreenVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     @IBAction func LogoBTN(_ sender: UIButton) {
         self.performSegue(withIdentifier: "LoginView", sender: sender)
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "liveVC" {
+            if let destinationVC = segue.destination as? LiveVC {
+                switch selectedModel {
+                case .Resnet50:
+                    destinationVC.selectedModel =  try! Resnet50(configuration: MLModelConfiguration()).model
+                case .MobileNetV2:
+                    destinationVC.selectedModel =  try! MobileNetV2(configuration: MLModelConfiguration()).model
+                case .SqueezeNet:
+                    destinationVC.selectedModel =  try! SqueezeNet(configuration: MLModelConfiguration()).model
+                case .Person:
+                    destinationVC.selectedModel = try! Person(configuration: MLModelConfiguration()).model
+                }
+            }
+        }
     }
     
     

@@ -41,6 +41,11 @@
 		D2AA4E842B82E718007D6FFC /* RealVisionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA4E832B82E718007D6FFC /* RealVisionTests.swift */; };
 		D2AA4E8E2B82E718007D6FFC /* RealVisionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA4E8D2B82E718007D6FFC /* RealVisionUITests.swift */; };
 		D2AA4E902B82E718007D6FFC /* RealVisionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA4E8F2B82E718007D6FFC /* RealVisionUITestsLaunchTests.swift */; };
+		D2C4101A2BCFB9EA002FD3A9 /* YOLOv3Tiny.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D2C410192BCFB9EA002FD3A9 /* YOLOv3Tiny.mlmodel */; };
+		D2C4101C2BCFB9F2002FD3A9 /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D2C4101B2BCFB9F2002FD3A9 /* SqueezeNet.mlmodel */; };
+		D2C4101E2BCFB9FA002FD3A9 /* Person.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D2C4101D2BCFB9FA002FD3A9 /* Person.mlmodel */; };
+		D2C410202BCFBA02002FD3A9 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D2C4101F2BCFBA02002FD3A9 /* MobileNetV2.mlmodel */; };
+		D2C410222BCFBA18002FD3A9 /* GlobalPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C410212BCFBA18002FD3A9 /* GlobalPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +94,11 @@
 		D2AA4E892B82E718007D6FFC /* RealVisionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealVisionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2AA4E8D2B82E718007D6FFC /* RealVisionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealVisionUITests.swift; sourceTree = "<group>"; };
 		D2AA4E8F2B82E718007D6FFC /* RealVisionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealVisionUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D2C410192BCFB9EA002FD3A9 /* YOLOv3Tiny.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3Tiny.mlmodel; sourceTree = "<group>"; };
+		D2C4101B2BCFB9F2002FD3A9 /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
+		D2C4101D2BCFB9FA002FD3A9 /* Person.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Person.mlmodel; sourceTree = "<group>"; };
+		D2C4101F2BCFBA02002FD3A9 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
+		D2C410212BCFBA18002FD3A9 /* GlobalPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,7 +186,7 @@
 				959B2A402BB7AE7500325035 /* PrivacyPolicyVC.swift */,
 				D2AA4E752B82E718007D6FFC /* Assets.xcassets */,
 				D2AA4E772B82E718007D6FFC /* LaunchScreen.storyboard */,
-				D277CCA42BC9F605000A9E00 /* Resnet50.mlmodel */,
+				D2C4100E2BCFB853002FD3A9 /* Models */,
 				D2AA4E7A2B82E718007D6FFC /* Info.plist */,
 				D277CCAA2BCA0868000A9E00 /* GoogleService-Info.plist */,
 			);
@@ -198,6 +208,19 @@
 				D2AA4E8F2B82E718007D6FFC /* RealVisionUITestsLaunchTests.swift */,
 			);
 			path = RealVisionUITests;
+			sourceTree = "<group>";
+		};
+		D2C4100E2BCFB853002FD3A9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D2C410212BCFBA18002FD3A9 /* GlobalPickerView.swift */,
+				D277CCA42BC9F605000A9E00 /* Resnet50.mlmodel */,
+				D2C4101B2BCFB9F2002FD3A9 /* SqueezeNet.mlmodel */,
+				D2C4101F2BCFBA02002FD3A9 /* MobileNetV2.mlmodel */,
+				D2C4101D2BCFB9FA002FD3A9 /* Person.mlmodel */,
+				D2C410192BCFB9EA002FD3A9 /* YOLOv3Tiny.mlmodel */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,16 +372,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2C410202BCFBA02002FD3A9 /* MobileNetV2.mlmodel in Sources */,
 				D2AA4E712B82E717007D6FFC /* ViewController.swift in Sources */,
+				D2C4101C2BCFB9F2002FD3A9 /* SqueezeNet.mlmodel in Sources */,
 				D242298A2B97CC6A0081737E /* UIAlertController + Extension.swift in Sources */,
 				D242298E2B97CCB50081737E /* String + Extension.swift in Sources */,
 				D27CC89A2B996B3400939C55 /* SignupVC.swift in Sources */,
+				D2C4101E2BCFB9FA002FD3A9 /* Person.mlmodel in Sources */,
 				D2AA4E6D2B82E717007D6FFC /* AppDelegate.swift in Sources */,
 				726A95A62B9ACC170085492E /* SettingsVC.swift in Sources */,
 				D277CCA52BC9F605000A9E00 /* Resnet50.mlmodel in Sources */,
 				72D9970E2B84839D004051E2 /* RealVisionVC.swift in Sources */,
+				D2C410222BCFBA18002FD3A9 /* GlobalPickerView.swift in Sources */,
 				D27CC8982B996ADB00939C55 /* ResetpasswordVC.swift in Sources */,
 				721FCD622BC8FD3B00B09922 /* TermsVC.swift in Sources */,
+				D2C4101A2BCFB9EA002FD3A9 /* YOLOv3Tiny.mlmodel in Sources */,
 				D27CC89C2B996B5E00939C55 /* HomescreenVC.swift in Sources */,
 				959B2A412BB7AE7500325035 /* PrivacyPolicyVC.swift in Sources */,
 				D2250EA92BB7671E008DAB56 /* HelpVC.swift in Sources */,
