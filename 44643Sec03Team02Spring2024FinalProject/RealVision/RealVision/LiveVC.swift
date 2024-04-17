@@ -20,10 +20,8 @@ class LiveVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     @IBOutlet weak var Live: UIView!
     
     @IBOutlet weak var Objectdescription: UILabel!
-    
     @IBOutlet weak var Accuracy: UILabel!
     
-    var model = Resnet50().model
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,7 +54,7 @@ class LiveVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
             guard let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
             
-            guard let model = try? VNCoreMLModel(for: model) else { return }
+            guard let model = try? VNCoreMLModel(for: selectedModel) else { return }
             let request = VNCoreMLRequest(model: model) { (finishedReq, err) in
                 
                 guard let results = finishedReq.results as? [VNClassificationObservation] else {return}
@@ -75,7 +73,6 @@ class LiveVC: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
             try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
             
         }
-
     
 
     /*

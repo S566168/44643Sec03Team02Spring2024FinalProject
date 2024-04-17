@@ -35,7 +35,7 @@ class HomescreenVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
 
     }
     
-    @IBAction func pickerBTN(_ sender: UIButton) {
+    @IBAction func onHand(_ sender: Any) {
     
     self.globalPicker.stringArray =  models.map { $0.rawValue }
     
@@ -85,6 +85,8 @@ class HomescreenVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         }
     
     @IBAction func live(_ sender: UIButton) {
+        
+        self.performSegue(withIdentifier: "liveVC", sender: sender)
     }
     
 
