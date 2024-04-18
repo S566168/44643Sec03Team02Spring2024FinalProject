@@ -529,6 +529,7 @@ Please note that these terms and conditions are for illustrative purposes only a
                     <connections>
                         <outlet property="imageView" destination="MO5-mX-lf3" id="Ka5-mN-zTr"/>
                         <outlet property="liveBTN" destination="Ef5-QW-zpW" id="ut0-UX-1dv"/>
+                        <outlet property="messageLBL" destination="gS2-Oe-Kt1" id="5HE-Ox-37p"/>
                         <outlet property="photosBTN" destination="3u8-uf-S1d" id="Dzx-kl-daQ"/>
                         <outlet property="settingsBTN" destination="4Do-O8-mHI" id="l9A-xP-9qW"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="LoginView" id="aD0-kK-HmT"/>
@@ -1171,7 +1172,7 @@ Please note that these terms and conditions are for illustrative purposes only a
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="7bM-BW-Udi"/>
+        <segue reference="aD0-kK-HmT"/>
         <segue reference="ODA-3U-rTd"/>
     </inferredMetricsTieBreakers>
     <resources>

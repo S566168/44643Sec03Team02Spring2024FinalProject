@@ -8,6 +8,8 @@
 import UIKit
 import AnimatedGradientView
 import CoreML
+import Vision
+import AudioToolbox
 
 enum Model: String {
     case Resnet50
@@ -21,18 +23,81 @@ let models: [Model] = [.Resnet50, .MobileNetV2, .SqueezeNet, .Person]
 class HomescreenVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     var selectedModel:Model = .Resnet50
+    var visionModel: VNCoreMLModel!
     
     @IBOutlet weak var settingsBTN: UIButton!
     @IBOutlet weak var photosBTN: UIButton!
     @IBOutlet weak var liveBTN: UIButton!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var messageLBL: UILabel!
+    
+    
+    
     let imagePicker = UIImagePickerController()
     let globalPicker = GlobalPickerView()
     override func viewDidLoad() {
         super.viewDidLoad()
         applyGradientBackground()
 
+        if let model = try? VNCoreMLModel(for: MobileNetV2().model) {
+                   visionModel = model
+               } else {
+                   print("Failed to load Core ML model.")
+               }
+               
+               configureGestures()
+               messageLBL.text = "upload an image"
     }
+    func configureGestures() {
+                let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleDoubleTap))
+                doubleTapGesture.numberOfTapsRequired = 2
+                imageView.addGestureRecognizer(doubleTapGesture)
+                
+                imageView.isUserInteractionEnabled = true
+            }
+            
+        @objc func handleDoubleTap() {
+            guard imageView.image != nil else {
+                return // No need to prompt if there's no image
+            }
+            AudioServicesPlaySystemSound(1104)
+            let alertController = UIAlertController(title: "Reset Image", message: "Do you want to reset the image?", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
+                self.imageView.image = nil
+                self.messageLBL.text = "Image reset."
+            }
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            
+            alertController.addAction(okAction)
+            alertController.addAction(cancelAction)
+            
+            present(alertController, animated: true, completion: nil)
+        }
+            
+            func classifyImage(_ image: UIImage) {
+                guard let ciImage = CIImage(image: image) else { return }
+                
+                let request = VNCoreMLRequest(model: visionModel) { request, error in
+                    guard let results = request.results as? [VNClassificationObservation],
+                          let topResult = results.first else {
+                        print("Failed to classify image:", error ?? "Unknown error")
+                        return
+                    }
+                    
+                    DispatchQueue.main.async {
+                        // Update UI with classification result
+                        self.messageLBL.text = "This image is  \(topResult.identifier.description)."
+                    }
+                }
+                
+                let handler = VNImageRequestHandler(ciImage: ciImage)
+                do {
+                    try handler.perform([request])
+                } catch {
+                    print("Failed to perform classification:", error)
+                }
+            }
     
     override func viewDidLayoutSubviews() {
             super.viewDidLayoutSubviews()
@@ -79,15 +144,22 @@ class HomescreenVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         present(imagePicker, animated: true, completion: nil)
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-            if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-                imageView.image = pickedImage // Use the imageView outlet
-            }
-            dismiss(animated: true, completion: nil)
+            picker.dismiss(animated: true)
+            guard let pickedImage = info[.originalImage] as? UIImage else { return }
+            imageView.image = pickedImage
+            messageLBL.text = "Classifying image..."
+            
+            // Classify the image immediately after it's picked
+            classifyImage(pickedImage)
+            
+            // Play a sound or perform any other actions if needed
+            AudioServicesPlaySystemSound(1109)
         }
 
-        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-            dismiss(animated: true, completion: nil)
-        }
+            
+            func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+                dismiss(animated: true, completion: nil)
+            }
     
     @IBAction func live(_ sender: UIButton) {
         
