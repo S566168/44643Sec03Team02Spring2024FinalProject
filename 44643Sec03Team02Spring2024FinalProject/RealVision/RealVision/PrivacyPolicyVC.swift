@@ -16,6 +16,12 @@ applyGradientBackground()
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidLayoutSubviews() {
+            super.viewDidLayoutSubviews()
+            self.view.subviews.first?.frame = self.view.bounds
+            
+        }
+    
     private func applyGradientBackground(){
         let _: CAGradientLayerType = .axial
         let _: AnimatedGradientViewDirection = .up

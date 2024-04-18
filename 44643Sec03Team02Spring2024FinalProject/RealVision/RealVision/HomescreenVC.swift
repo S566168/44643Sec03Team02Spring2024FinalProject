@@ -22,7 +22,6 @@ class HomescreenVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     
     var selectedModel:Model = .Resnet50
     
-    @IBOutlet weak var logoBTN: UIButton!
     @IBOutlet weak var settingsBTN: UIButton!
     @IBOutlet weak var photosBTN: UIButton!
     @IBOutlet weak var liveBTN: UIButton!
@@ -34,6 +33,12 @@ class HomescreenVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         applyGradientBackground()
 
     }
+    
+    override func viewDidLayoutSubviews() {
+            super.viewDidLayoutSubviews()
+            self.view.subviews.first?.frame = self.view.bounds
+            
+        }
     
     @IBAction func onHand(_ sender: Any) {
     
@@ -89,12 +94,11 @@ class HomescreenVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         self.performSegue(withIdentifier: "liveVC", sender: sender)
     }
     
-
-    
-    @IBAction func LogoBTN(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "LoginView", sender: sender)
-        
+    @IBAction func Profile(_ sender: UIButton) {
+        performSegue(withIdentifier: "ProfileView", sender: self)
     }
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "liveVC" {

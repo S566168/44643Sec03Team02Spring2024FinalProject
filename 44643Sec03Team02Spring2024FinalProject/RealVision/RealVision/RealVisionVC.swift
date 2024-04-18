@@ -29,6 +29,12 @@ class RealVisionVC: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidLayoutSubviews() {
+            super.viewDidLayoutSubviews()
+            self.view.subviews.first?.frame = self.view.bounds
+            
+        }
     override func viewIsAppearing(_ animated: Bool) {
         super.viewIsAppearing(animated)
         self.userNameTF.text = ""
