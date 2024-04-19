@@ -54,10 +54,10 @@ class ResetpasswordVC: UIViewController {
                 }
                 Auth.auth().sendPasswordReset(withEmail: email) { [weak self] error in
                     guard let self = self else { return }
-                    if let error = error {
+                    if error != nil {
                         openAlert(title: "Alert", message: "Error sending reset email:", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{_ in }])
                     } else {
-                        openAlert(title: "Alert", message: "Reset email sent successfully", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{_ in }])
+                        openAlert(title: "Alert", message: "If you are already registered you will received a reset email request or else create a new account", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{_ in }])
                         emailIdTF.text = ""
                     }
                 }
