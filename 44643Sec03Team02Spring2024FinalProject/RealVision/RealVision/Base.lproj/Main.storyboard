@@ -426,13 +426,13 @@ Please note that these terms and conditions are for illustrative purposes only a
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NZw-Jt-B86" userLabel="BigContainer">
-                                <rect key="frame" x="30" y="30" width="333" height="743"/>
+                                <rect key="frame" x="30" y="30" width="333" height="792"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="D2g-PW-feh">
-                                        <rect key="frame" x="0.0" y="0.0" width="333" height="44.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="47.666666666666664"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUL-cR-Nxf" userLabel="ProfileBTN">
-                                                <rect key="frame" x="0.0" y="0.0" width="63.666666666666664" height="44.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="63.666666666666664" height="47.666666666666664"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background" image="profile" imageContentMode="scaleAspectFit"/>
@@ -442,13 +442,13 @@ Please note that these terms and conditions are for illustrative purposes only a
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="en1-2m-eBS">
-                                                <rect key="frame" x="71.666666666666686" y="0.0" width="181" height="44.666666666666664"/>
+                                                <rect key="frame" x="71.666666666666686" y="0.0" width="181" height="47.666666666666664"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Do-O8-mHI" userLabel="SettingsBTN">
-                                                <rect key="frame" x="260.66666666666669" y="0.0" width="72.333333333333314" height="44.666666666666664"/>
+                                                <rect key="frame" x="260.66666666666669" y="0.0" width="72.333333333333314" height="47.666666666666664"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="settings ">
                                                     <backgroundConfiguration key="background"/>
@@ -463,13 +463,13 @@ Please note that these terms and conditions are for illustrative purposes only a
                                         </constraints>
                                     </stackView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RealvisionLogo" translatesAutoresizingMaskIntoConstraints="NO" id="5VY-Qw-Kmt">
-                                        <rect key="frame" x="0.0" y="52.666666666666671" width="333" height="148.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="55.666666666666671" width="333" height="158.33333333333331"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9Dv-nm-mi7" userLabel="ButtonsSV">
-                                        <rect key="frame" x="0.0" y="209.33333333333331" width="333" height="148.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="222" width="333" height="158.33333333333337"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3u8-uf-S1d" userLabel="photosBTN">
-                                                <rect key="frame" x="0.0" y="0.0" width="105.66666666666667" height="148.33333333333334"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="105.66666666666667" height="158.33333333333334"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="Img">
                                                     <backgroundConfiguration key="background"/>
@@ -479,7 +479,7 @@ Please note that these terms and conditions are for illustrative purposes only a
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ef5-QW-zpW" userLabel="liveBTN">
-                                                <rect key="frame" x="113.66666666666666" y="0.0" width="105.66666666666666" height="148.33333333333334"/>
+                                                <rect key="frame" x="113.66666666666666" y="0.0" width="105.66666666666666" height="158.33333333333334"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="live">
                                                     <backgroundConfiguration key="background"/>
@@ -490,7 +490,7 @@ Please note that these terms and conditions are for illustrative purposes only a
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqo-4u-xhZ" userLabel="PickerBTN">
-                                                <rect key="frame" x="227.33333333333329" y="0.0" width="105.66666666666666" height="148.33333333333334"/>
+                                                <rect key="frame" x="227.33333333333329" y="0.0" width="105.66666666666666" height="158.33333333333334"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background" image="Layers"/>
@@ -505,10 +505,10 @@ Please note that these terms and conditions are for illustrative purposes only a
                                         </constraints>
                                     </stackView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MO5-mX-lf3">
-                                        <rect key="frame" x="0.0" y="365.66666666666674" width="333" height="332.33333333333326"/>
+                                        <rect key="frame" x="0.0" y="388.33333333333326" width="333" height="356"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gS2-Oe-Kt1">
-                                        <rect key="frame" x="0.0" y="706" width="333" height="37"/>
+                                        <rect key="frame" x="0.0" y="752.33333333333337" width="333" height="39.666666666666629"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -532,7 +532,6 @@ Please note that these terms and conditions are for illustrative purposes only a
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KYP-3V-v8F"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="imageView" destination="MO5-mX-lf3" id="Ka5-mN-zTr"/>
                         <outlet property="liveBTN" destination="Ef5-QW-zpW" id="ut0-UX-1dv"/>
