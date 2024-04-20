@@ -7,6 +7,7 @@
 
 import UIKit
 import AnimatedGradientView
+import AudioToolbox
 
 class SettingsVC: UIViewController {
     
@@ -48,19 +49,24 @@ class SettingsVC: UIViewController {
     }
     
     @IBAction func help(_ sender: UIButton) {
+        AudioServicesPlaySystemSound(1013)
         self.performSegue(withIdentifier: "HelpView", sender: sender)
+        
     }
     
     
     @IBAction func privacy(_ sender: UIButton) {
+        AudioServicesPlaySystemSound(1013)
         self.performSegue(withIdentifier: "PrivacyView", sender: sender)
     }
     
     @IBAction func terms(_ sender: UIButton) {
+        AudioServicesPlaySystemSound(1013)
         self.performSegue(withIdentifier: "TermsView", sender: sender)
     }
     
     @IBAction func CancelBTN(_ sender: UIButton) {
+        AudioServicesPlaySystemSound(1013)
         self.performSegue(withIdentifier: "Cancel", sender: sender)
     }
     

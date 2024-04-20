@@ -7,6 +7,7 @@
 
 import UIKit
 import AnimatedGradientView
+import AudioToolbox
 
 class HelpVC: UIViewController {
     
@@ -39,7 +40,7 @@ class HelpVC: UIViewController {
     }
     
     @IBAction func Send(_ sender: Any) {
-        
+        AudioServicesPlaySystemSound(1114)
         if let message = Message.text{
             if message == ""{
                 openAlert(title: "Alert", message: "Please enter a valid message", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in }])

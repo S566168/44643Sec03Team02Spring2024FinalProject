@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseAuth
 import AnimatedGradientView
+import AudioToolbox
 
 class SignupVC: UIViewController {
     
@@ -44,10 +45,12 @@ class SignupVC: UIViewController {
     }
     
     @IBAction func login(_ sender: UIButton) {
+        AudioServicesPlaySystemSound(1009)
         self.performSegue(withIdentifier: "LoginView", sender: sender)
     }
     
     @IBAction func createAccount(_ sender: UIButton) {
+        AudioServicesPlaySystemSound(1009)
         guard let email = emailTF.text, !email.isEmpty else {
             openAlert(title: "Alert", message: "Please enter email!", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in }])
             return

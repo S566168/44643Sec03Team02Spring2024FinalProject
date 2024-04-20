@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseAuth
 import AnimatedGradientView
+import AudioToolbox
 
 class ResetpasswordVC: UIViewController {
     
@@ -43,6 +44,7 @@ class ResetpasswordVC: UIViewController {
     }
     
     @IBAction func reset(_ sender: UIButton) {
+        AudioServicesPlaySystemSound(1057)
         guard let email = emailIdTF.text, !email.isEmpty else {
             openAlert(title: "Alert", message: "Please enter email!", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{_ in }])
             return
@@ -59,6 +61,7 @@ class ResetpasswordVC: UIViewController {
         
     }
     @IBAction func Cancel(_ sender: UIButton) {
+        AudioServicesPlaySystemSound(1057)
         self.performSegue(withIdentifier: "LoginView", sender: sender)
     }
     

@@ -7,6 +7,7 @@
 
 import UIKit
 import AnimatedGradientView
+import AudioToolbox
 
 class TermsVC: UIViewController {
     

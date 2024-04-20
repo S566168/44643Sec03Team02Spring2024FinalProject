@@ -9,6 +9,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 import AnimatedGradientView
+import AudioToolbox
 
 class UserVC: UIViewController {
     
@@ -45,6 +46,7 @@ class UserVC: UIViewController {
     }
     
     @IBAction func logout(_ sender: UIButton) {
+        AudioServicesPlaySystemSound(1104)
         do {
             
             try Auth.auth().signOut()
@@ -54,6 +56,7 @@ class UserVC: UIViewController {
     }
     
     @IBAction func Delete(_ sender: UIButton) {
+        AudioServicesPlaySystemSound(1104)
         
         let user = Auth.auth().currentUser
         

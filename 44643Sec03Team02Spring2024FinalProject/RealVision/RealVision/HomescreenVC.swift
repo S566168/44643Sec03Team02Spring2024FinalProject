@@ -106,6 +106,7 @@ class HomescreenVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     }
     
     @IBAction func onHand(_ sender: Any) {
+        AudioServicesPlaySystemSound(1103)
         
         self.globalPicker.stringArray =  models.map { $0.rawValue }
         
@@ -135,10 +136,12 @@ class HomescreenVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     
     
     @IBAction func SettingsBTN(_ sender: UIButton) {
+        AudioServicesPlaySystemSound(1103)
         self.performSegue(withIdentifier: "SettingsView", sender: sender)
     }
     
     @IBAction func photos(_ sender: UIButton) {
+        AudioServicesPlaySystemSound(1103)
         imagePicker.delegate = self
         imagePicker.sourceType = .photoLibrary
         present(imagePicker, animated: true, completion: nil)
@@ -160,11 +163,13 @@ class HomescreenVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     }
     
     @IBAction func live(_ sender: UIButton) {
+        AudioServicesPlaySystemSound(1103)
         
         self.performSegue(withIdentifier: "liveVC", sender: sender)
     }
     
     @IBAction func Profile(_ sender: UIButton) {
+        AudioServicesPlaySystemSound(1103)
         performSegue(withIdentifier: "ProfileView", sender: self)
     }
     

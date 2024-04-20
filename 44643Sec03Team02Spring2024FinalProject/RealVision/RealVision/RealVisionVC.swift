@@ -9,6 +9,7 @@ import UIKit
 import Lottie
 import FirebaseAuth
 import AnimatedGradientView
+import AudioToolbox
 
 
 class RealVisionVC: UIViewController {
@@ -68,9 +69,11 @@ class RealVisionVC: UIViewController {
     }
     
     @IBAction func loginBTN(_ sender: UIButton) {
+        AudioServicesPlaySystemSound(1007)
         guard let email = userNameTF.text, !email.isEmpty else {
             openAlert(title: "Alert", message: "Email address not found", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{ _ in}])
             return
+            
         }
         
         guard let password = passwordTF.text, !password.isEmpty else {
@@ -90,10 +93,12 @@ class RealVisionVC: UIViewController {
     }
     
     @IBAction func forgotPwdBTN(_ sender: UIButton) {
+        AudioServicesPlaySystemSound(1007)
         self.performSegue(withIdentifier: "ResetpasswordView", sender: sender)
     }
     
     @IBAction func signUpBTN(_ sender: UIButton) {
+        AudioServicesPlaySystemSound(1007)
         self.performSegue(withIdentifier: "SignupView", sender: sender)
     }
 
