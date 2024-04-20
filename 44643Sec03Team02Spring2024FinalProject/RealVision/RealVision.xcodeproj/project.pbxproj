@@ -46,7 +46,7 @@
 		D2C4101C2BCFB9F2002FD3A9 /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D2C4101B2BCFB9F2002FD3A9 /* SqueezeNet.mlmodel */; };
 		D2C4101E2BCFB9FA002FD3A9 /* Person.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D2C4101D2BCFB9FA002FD3A9 /* Person.mlmodel */; };
 		D2C410202BCFBA02002FD3A9 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D2C4101F2BCFBA02002FD3A9 /* MobileNetV2.mlmodel */; };
-		D2C410222BCFBA18002FD3A9 /* GlobalPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C410212BCFBA18002FD3A9 /* GlobalPickerView.swift */; };
+		D2C410222BCFBA18002FD3A9 /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C410212BCFBA18002FD3A9 /* Picker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,7 +100,7 @@
 		D2C4101B2BCFB9F2002FD3A9 /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
 		D2C4101D2BCFB9FA002FD3A9 /* Person.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Person.mlmodel; sourceTree = "<group>"; };
 		D2C4101F2BCFBA02002FD3A9 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
-		D2C410212BCFBA18002FD3A9 /* GlobalPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalPickerView.swift; sourceTree = "<group>"; };
+		D2C410212BCFBA18002FD3A9 /* Picker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,7 +216,7 @@
 		D2C4100E2BCFB853002FD3A9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D2C410212BCFBA18002FD3A9 /* GlobalPickerView.swift */,
+				D2C410212BCFBA18002FD3A9 /* Picker.swift */,
 				D277CCA42BC9F605000A9E00 /* Resnet50.mlmodel */,
 				D2C4101B2BCFB9F2002FD3A9 /* SqueezeNet.mlmodel */,
 				D2C4101F2BCFBA02002FD3A9 /* MobileNetV2.mlmodel */,
@@ -387,7 +387,7 @@
 				726A95A62B9ACC170085492E /* SettingsVC.swift in Sources */,
 				D277CCA52BC9F605000A9E00 /* Resnet50.mlmodel in Sources */,
 				72D9970E2B84839D004051E2 /* RealVisionVC.swift in Sources */,
-				D2C410222BCFBA18002FD3A9 /* GlobalPickerView.swift in Sources */,
+				D2C410222BCFBA18002FD3A9 /* Picker.swift in Sources */,
 				D27CC8982B996ADB00939C55 /* ResetpasswordVC.swift in Sources */,
 				721FCD622BC8FD3B00B09922 /* TermsVC.swift in Sources */,
 				D2C4101A2BCFB9EA002FD3A9 /* YOLOv3Tiny.mlmodel in Sources */,

@@ -15,19 +15,18 @@ class SettingsVC: UIViewController {
     @IBOutlet weak var helpBTN: UIButton!
     @IBOutlet weak var privacyBTN: UIButton!
     @IBOutlet weak var termsBTN: UIButton!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         applyGradientBackground()
 
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidLayoutSubviews() {
-            super.viewDidLayoutSubviews()
-            self.view.subviews.first?.frame = self.view.bounds
-            
-        }
+        super.viewDidLayoutSubviews()
+        self.view.subviews.first?.frame = self.view.bounds
+        
+    }
     private func applyGradientBackground(){
         let _: CAGradientLayerType = .axial
         let _: AnimatedGradientViewDirection = .up
@@ -42,9 +41,9 @@ class SettingsVC: UIViewController {
     
     @IBAction func share(_ sender: UIButton) {
         let activity = UIActivityViewController(activityItems: ["/Users/akhilreddy/Documents/44643Sec03Team02Spring2024FinalProject/44643Sec03Team02Spring2024FinalProject/44643Sec03Team02Spring2024FinalProject/RealVision"], applicationActivities: nil)
-                activity.popoverPresentationController?.sourceView = self.view
-                
-                self.present(activity, animated: true, completion: nil)
+        activity.popoverPresentationController?.sourceView = self.view
+        
+        self.present(activity, animated: true, completion: nil)
         
     }
     
@@ -68,13 +67,13 @@ class SettingsVC: UIViewController {
     
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

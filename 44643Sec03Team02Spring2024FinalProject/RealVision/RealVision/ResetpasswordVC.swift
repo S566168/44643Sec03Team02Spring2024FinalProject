@@ -17,22 +17,18 @@ class ResetpasswordVC: UIViewController {
     @IBOutlet weak var resetBTN: UIButton!
     @IBOutlet weak var cancelBTN: UIButton!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
         applyGradientBackground()
         
-
-        // Do any additional setup after loading the view.
-        
-
     }
     override func viewDidLayoutSubviews() {
-            super.viewDidLayoutSubviews()
-            self.view.subviews.first?.frame = self.view.bounds
-            
-        }
+        super.viewDidLayoutSubviews()
+        self.view.subviews.first?.frame = self.view.bounds
+        
+    }
     
     private func applyGradientBackground(){
         let _: CAGradientLayerType = .axial
@@ -46,22 +42,21 @@ class ResetpasswordVC: UIViewController {
         view.sendSubviewToBack(animatedGradient)
     }
     
-    
     @IBAction func reset(_ sender: UIButton) {
         guard let email = emailIdTF.text, !email.isEmpty else {
-                    openAlert(title: "Alert", message: "Please enter email!", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{_ in }])
-                    return
-                }
-                Auth.auth().sendPasswordReset(withEmail: email) { [weak self] error in
-                    guard let self = self else { return }
-                    if error != nil {
-                        openAlert(title: "Alert", message: "Error sending reset email:", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{_ in }])
-                    } else {
-                        openAlert(title: "Alert", message: "If you are already registered you will received a reset email request or else create a new account", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{_ in }])
-                        emailIdTF.text = ""
-                    }
-                }
-
+            openAlert(title: "Alert", message: "Please enter email!", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{_ in }])
+            return
+        }
+        Auth.auth().sendPasswordReset(withEmail: email) { [weak self] error in
+            guard let self = self else { return }
+            if error != nil {
+                openAlert(title: "Alert", message: "Error sending reset email:", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{_ in }])
+            } else {
+                openAlert(title: "Alert", message: "If you are already registered you will received a reset email request or else create a new account", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{_ in }])
+                emailIdTF.text = ""
+            }
+        }
+        
     }
     @IBAction func Cancel(_ sender: UIButton) {
         self.performSegue(withIdentifier: "LoginView", sender: sender)
@@ -69,24 +64,24 @@ class ResetpasswordVC: UIViewController {
     
     
     func showAlert(message: String, completion: @escaping () -> Void) {
-            let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-                
-                completion()
-            }
-            alertController.addAction(okAction)
-            present(alertController, animated: true, completion: nil)
+        let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            
+            completion()
         }
-
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

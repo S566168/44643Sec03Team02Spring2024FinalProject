@@ -34,91 +34,91 @@ class HomescreenVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     
     
     let imagePicker = UIImagePickerController()
-    let globalPicker = GlobalPickerView()
+    let globalPicker = Picker()
     override func viewDidLoad() {
         super.viewDidLoad()
         applyGradientBackground()
-
+        
         if let model = try? VNCoreMLModel(for: MobileNetV2().model) {
-                   visionModel = model
-               } else {
-                   print("Failed to load Core ML model.")
-               }
-               
-               configureGestures()
-               messageLBL.text = "upload an image"
+            visionModel = model
+        } else {
+            print("Failed to load Core ML model.")
+        }
+        
+        configureGestures()
+        messageLBL.text = "upload an image"
     }
     func configureGestures() {
-                let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleDoubleTap))
-                doubleTapGesture.numberOfTapsRequired = 2
-                imageView.addGestureRecognizer(doubleTapGesture)
-                
-                imageView.isUserInteractionEnabled = true
-            }
-            
-        @objc func handleDoubleTap() {
-            guard imageView.image != nil else {
-                return // No need to prompt if there's no image
-            }
-            AudioServicesPlaySystemSound(1104)
-            let alertController = UIAlertController(title: "Reset Image", message: "Do you want to reset the image?", preferredStyle: .alert)
-            
-            let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
-                self.imageView.image = nil
-                self.messageLBL.text = "Image reset."
-            }
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            
-            alertController.addAction(okAction)
-            alertController.addAction(cancelAction)
-            
-            present(alertController, animated: true, completion: nil)
+        let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleDoubleTap))
+        doubleTapGesture.numberOfTapsRequired = 2
+        imageView.addGestureRecognizer(doubleTapGesture)
+        
+        imageView.isUserInteractionEnabled = true
+    }
+    
+    @objc func handleDoubleTap() {
+        guard imageView.image != nil else {
+            return // No need to prompt if there's no image
         }
-            
-            func classifyImage(_ image: UIImage) {
-                guard let ciImage = CIImage(image: image) else { return }
-                
-                let request = VNCoreMLRequest(model: visionModel) { request, error in
-                    guard let results = request.results as? [VNClassificationObservation],
-                          let topResult = results.first else {
-                        print("Failed to classify image:", error ?? "Unknown error")
-                        return
-                    }
-                    
-                    DispatchQueue.main.async {
-                        // Update UI with classification result
-                        self.messageLBL.text = "This image is  \(topResult.identifier.description)."
-                    }
-                }
-                
-                let handler = VNImageRequestHandler(ciImage: ciImage)
-                do {
-                    try handler.perform([request])
-                } catch {
-                    print("Failed to perform classification:", error)
-                }
+        AudioServicesPlaySystemSound(1104)
+        let alertController = UIAlertController(title: "Reset Image", message: "Do you want to reset the image?", preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
+            self.imageView.image = nil
+            self.messageLBL.text = "Image reset."
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    func classifyImage(_ image: UIImage) {
+        guard let ciImage = CIImage(image: image) else { return }
+        
+        let request = VNCoreMLRequest(model: visionModel) { request, error in
+            guard let results = request.results as? [VNClassificationObservation],
+                  let topResult = results.first else {
+                print("Failed to classify image:", error ?? "Unknown error")
+                return
             }
+            
+            DispatchQueue.main.async {
+                // Update UI with classification result
+                self.messageLBL.text = "This image is  \(topResult.identifier.description)."
+            }
+        }
+        
+        let handler = VNImageRequestHandler(ciImage: ciImage)
+        do {
+            try handler.perform([request])
+        } catch {
+            print("Failed to perform classification:", error)
+        }
+    }
     
     override func viewDidLayoutSubviews() {
-            super.viewDidLayoutSubviews()
-            self.view.subviews.first?.frame = self.view.bounds
-            
-        }
+        super.viewDidLayoutSubviews()
+        self.view.subviews.first?.frame = self.view.bounds
+        
+    }
     
     @IBAction func onHand(_ sender: Any) {
-    
-    self.globalPicker.stringArray =  models.map { $0.rawValue }
-    
-    self.globalPicker.modalPresentationStyle = .overCurrentContext
-    self.globalPicker.onDone = { [weak self] index in
+        
+        self.globalPicker.stringArray =  models.map { $0.rawValue }
+        
+        self.globalPicker.modalPresentationStyle = .overCurrentContext
+        self.globalPicker.onDone = { [weak self] index in
             guard let self = self else { return }
             if let selectedModel = Model(rawValue: models[index].rawValue) {
                 self.selectedModel = selectedModel
             }
-       }
-    
-    self.present(self.globalPicker, animated: true, completion: nil)
-}
+        }
+        
+        self.present(self.globalPicker, animated: true, completion: nil)
+    }
     
     
     private func applyGradientBackground(){
@@ -144,22 +144,20 @@ class HomescreenVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         present(imagePicker, animated: true, completion: nil)
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-            picker.dismiss(animated: true)
-            guard let pickedImage = info[.originalImage] as? UIImage else { return }
-            imageView.image = pickedImage
-            messageLBL.text = "Classifying image..."
-            
-            // Classify the image immediately after it's picked
-            classifyImage(pickedImage)
-            
-            // Play a sound or perform any other actions if needed
-            AudioServicesPlaySystemSound(1109)
-        }
-
-            
-            func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-                dismiss(animated: true, completion: nil)
-            }
+        picker.dismiss(animated: true)
+        guard let pickedImage = info[.originalImage] as? UIImage else { return }
+        imageView.image = pickedImage
+        messageLBL.text = "Classifying image..."
+        
+        classifyImage(pickedImage)
+        
+        AudioServicesPlaySystemSound(1109)
+    }
+    
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func live(_ sender: UIButton) {
         
@@ -191,13 +189,13 @@ class HomescreenVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

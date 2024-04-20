@@ -10,7 +10,7 @@ import Lottie
 import AnimatedGradientView
 
 class AnimationVC: UIViewController {
-
+    
     @IBOutlet weak var LaunchLAV: LottieAnimationView!{
         didSet{
             LaunchLAV.animation = LottieAnimation.named("Detection")
@@ -28,15 +28,14 @@ class AnimationVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         applyGradientBackground()
-
-        // Do any additional setup after loading the view.
+        
     }
     
     override func viewDidLayoutSubviews() {
-            super.viewDidLayoutSubviews()
-            self.view.subviews.first?.frame = self.view.bounds
-            
-        }
+        super.viewDidLayoutSubviews()
+        self.view.subviews.first?.frame = self.view.bounds
+        
+    }
     
     private func applyGradientBackground(){
         let _: CAGradientLayerType = .axial
@@ -49,15 +48,15 @@ class AnimationVC: UIViewController {
         view.addSubview(animatedGradient)
         view.sendSubviewToBack(animatedGradient)
     }
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

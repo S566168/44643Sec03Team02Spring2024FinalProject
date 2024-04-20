@@ -27,10 +27,9 @@ class SignupVC: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
-            super.viewDidLayoutSubviews()
-            self.view.subviews.first?.frame = self.view.bounds
-            
-        }
+        super.viewDidLayoutSubviews()
+        self.view.subviews.first?.frame = self.view.bounds
+    }
     
     private func applyGradientBackground(){
         let _: CAGradientLayerType = .axial

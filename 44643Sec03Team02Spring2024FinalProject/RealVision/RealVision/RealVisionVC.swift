@@ -17,7 +17,7 @@ class RealVisionVC: UIViewController {
     @IBOutlet weak var passwordLBL: UILabel!
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
-
+    
     
     @IBOutlet weak var loginBTN: UIButton!
     
@@ -27,14 +27,13 @@ class RealVisionVC: UIViewController {
         hideKeyboardWhenTappedAround()
         applyGradientBackground()
         
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidLayoutSubviews() {
-            super.viewDidLayoutSubviews()
-            self.view.subviews.first?.frame = self.view.bounds
-            
-        }
+        super.viewDidLayoutSubviews()
+        self.view.subviews.first?.frame = self.view.bounds
+        
+    }
     override func viewIsAppearing(_ animated: Bool) {
         super.viewIsAppearing(animated)
         self.userNameTF.text = ""
@@ -43,7 +42,6 @@ class RealVisionVC: UIViewController {
         //self.loginBTN.isEnabled = false
     }
     
-    //First Screen Actions
     private func applyGradientBackground(){
         let _: CAGradientLayerType = .axial
         let _: AnimatedGradientViewDirection = .up
@@ -71,27 +69,25 @@ class RealVisionVC: UIViewController {
     
     @IBAction func loginBTN(_ sender: UIButton) {
         guard let email = userNameTF.text, !email.isEmpty else {
-                    openAlert(title: "Alert", message: "Email address not found", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{ _ in}])
-                    return
-                }
-                
-                guard let password = passwordTF.text, !password.isEmpty else {
-                        openAlert(title: "Alert", message: "please enter valid password", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{ _ in}])
-                    return
-                }
-                
-                Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
-                    guard let self = self else { return }
-                    if let error = error {
-                        openAlert(title: "Alert", message: "Invalid Login Credentials! Please try again.", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{ _ in}])
-                    } else {
-                        self.performSegue(withIdentifier: "HomescreenView", sender: sender)
-                    }
-                    
-                }
-
+            openAlert(title: "Alert", message: "Email address not found", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{ _ in}])
+            return
+        }
+        
+        guard let password = passwordTF.text, !password.isEmpty else {
+            openAlert(title: "Alert", message: "please enter valid password", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{ _ in}])
+            return
+        }
+        
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+            guard let self = self else { return }
+            if error != nil {
+                openAlert(title: "Alert", message: "Invalid Login Credentials! Please try again.", alertStyle: .alert, actionTitles: ["okay"], actionStyles: [.default], actions: [{ _ in}])
+            } else {
+                self.performSegue(withIdentifier: "HomescreenView", sender: sender)
+            }
+            
+        }
     }
-    
     
     @IBAction func forgotPwdBTN(_ sender: UIButton) {
         self.performSegue(withIdentifier: "ResetpasswordView", sender: sender)
@@ -100,16 +96,6 @@ class RealVisionVC: UIViewController {
     @IBAction func signUpBTN(_ sender: UIButton) {
         self.performSegue(withIdentifier: "SignupView", sender: sender)
     }
-    
-    
-    
-    
-    @IBAction func facebook(_ sender: UIButton) {
-    }
-    
-    @IBAction func google(_ sender: UIButton) {
-    }
-    
-    
+
 }
 

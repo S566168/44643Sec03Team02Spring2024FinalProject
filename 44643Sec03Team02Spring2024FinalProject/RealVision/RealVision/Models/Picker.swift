@@ -1,6 +1,6 @@
 import UIKit
  
-class GlobalPickerView: UIViewController {
+class Picker: UIViewController {
     var stringArray: [String]!
     var onDone: ((Int) -> Void)?
     var onCancel: (() -> Void)?
@@ -86,7 +86,7 @@ class GlobalPickerView: UIViewController {
     }
 }
 
-extension GlobalPickerView: UIPickerViewDataSource, UIPickerViewDelegate {
+extension Picker: UIPickerViewDataSource, UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }

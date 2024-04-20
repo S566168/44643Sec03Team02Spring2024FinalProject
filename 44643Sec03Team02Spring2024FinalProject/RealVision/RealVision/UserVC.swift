@@ -18,20 +18,19 @@ class UserVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         applyGradientBackground()
-
         nameLBL.text = Auth.auth().currentUser?.uid ?? ""
         emailLBL.text = Auth.auth().currentUser?.email ?? ""
     }
     
     override func viewDidLayoutSubviews() {
-            super.viewDidLayoutSubviews()
-            self.view.subviews.first?.frame = self.view.bounds
+        super.viewDidLayoutSubviews()
+        self.view.subviews.first?.frame = self.view.bounds
         nameLBL.layer.cornerRadius = 5
         nameLBL.layer.borderWidth = 1
         emailLBL.layer.cornerRadius = 5
         emailLBL.layer.borderWidth = 1
-            
-        }
+        
+    }
     
     private func applyGradientBackground(){
         let _: CAGradientLayerType = .axial
@@ -47,11 +46,11 @@ class UserVC: UIViewController {
     
     @IBAction func logout(_ sender: UIButton) {
         do {
-                    
-                    try Auth.auth().signOut()
-                } catch {}
-
-                self.performSegue(withIdentifier: "Backtologin", sender: self)
+            
+            try Auth.auth().signOut()
+        } catch {}
+        
+        self.performSegue(withIdentifier: "Backtologin", sender: self)
     }
     
     @IBAction func Delete(_ sender: UIButton) {
@@ -68,4 +67,4 @@ class UserVC: UIViewController {
         self.performSegue(withIdentifier: "Backtologin", sender: self)
     }
 }
-    
+
